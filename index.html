@@ -1,26 +1,27 @@
 <!doctype html>
 <html lang="en">
+
 <head>
 
 	<!-- Required meta tags -->
-	<meta name="description" content="A MapleStory 2 Fansite with Skill Calculator, Exploration Guide and Fishing minigame.">
+	<meta name="description"
+		content="A MapleStory 2 Fansite with Skill Calculator, Exploration Guide and Fishing minigame.">
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-	
+
 	<script>
-		if( screen.width <= 768 ){ window.location.replace("./mobile.html"); } // if phone or pad
+		if (screen.width <= 768) { window.location.replace("./mobile.html"); } // if phone or pad
 	</script>
-	
+
 	<link rel="icon" href="images/favicon.png">
-	
+
 	<!-- Bootstrap CSS -->
-	<link rel="stylesheet" href="stylesheets/bootstrap.mini.css">
+	<link rel魔狼尖牙="stylesheet" href="stylesheets/bootstrap.mini.css">
 
 	<title>MS2 Fansite |</title>
-	
+
 	<style>
-	
-		*{
+		* {
 			border: 0;
 			margin: 0;
 			padding: 0;
@@ -32,19 +33,20 @@
 			-moz-user-select: none;
 			-ms-user-select: none;
 			user-select: none;
-			
+
 			scrollbar-color: #FA0 #f1f1f1;
 			scrollbar-width: thin;
 		}
 
-		html, body{
+		html,
+		body {
 			overflow: hidden;
 			height: 100%;
 			width: 100%;
 			background-color: #14101f;
-			font-family: "Montserrat", -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+			font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 		}
-		
+
 		/* --- SCROLLBAR --- */
 
 		/* width */
@@ -67,10 +69,10 @@
 		::-webkit-scrollbar-thumb:hover {
 			background: #b37700;
 		}
-		
+
 		/* --- BASE --- */
-	
-		#container{
+
+		#container {
 			background-image: url("./images/striker.jpg");
 			position: absolute;
 			top: 0;
@@ -81,7 +83,7 @@
 			background-size: cover;
 		}
 
-		#arrow_container{
+		#arrow_container {
 			position: absolute;
 			top: calc(50% - 50px);
 			width: 100%;
@@ -90,7 +92,7 @@
 			pointer-events: none;
 		}
 
-		#arrow_left{
+		#arrow_left {
 			position: relative;
 			float: left;
 			width: 200px;
@@ -100,7 +102,7 @@
 			cursor: pointer;
 		}
 
-		#arrow_left img{
+		#arrow_left img {
 			position: absolute;
 			transform: rotate(90deg);
 			left: 40px;
@@ -108,7 +110,7 @@
 			animation: arrow_bounce_left 2s ease-in-out infinite alternate;
 		}
 
-		#arrow_left_text{
+		#arrow_left_text {
 			position: relative;
 			top: calc(50% - 14px);
 			font-size: 24px;
@@ -119,7 +121,7 @@
 			text-shadow: 0px 0px 5px #000, 0px 0px 5px #FFF;
 		}
 
-		#arrow_right{
+		#arrow_right {
 			position: relative;
 			float: right;
 			width: 200px;
@@ -129,7 +131,7 @@
 			cursor: pointer;
 		}
 
-		#arrow_right img{
+		#arrow_right img {
 			position: absolute;
 			transform: rotate(-90deg);
 			right: 20px;
@@ -137,7 +139,7 @@
 			animation: arrow_bounce_right 2s ease-in-out infinite alternate;
 		}
 
-		#arrow_right_text{
+		#arrow_right_text {
 			position: relative;
 			top: calc(50% - 14px);
 			font-size: 24px;
@@ -148,8 +150,8 @@
 			pointer-events: none;
 			text-shadow: 0px 0px 5px #000, 0px 0px 5px #FFF;
 		}
-		
-		footer{
+
+		footer {
 			position: absolute;
 			bottom: 0;
 			left: 0;
@@ -159,7 +161,7 @@
 			overflow-y: hidden;
 		}
 
-		footer p{
+		footer p {
 			position: relative;
 			top: 15px;
 			color: #d9d9d9;
@@ -169,7 +171,7 @@
 			right: 5px;
 		}
 
-		#cookies{
+		#cookies {
 			position: absolute;
 			right: 5px;
 			bottom: 30px;
@@ -185,20 +187,20 @@
 			opacity: 1;
 			display: none;
 		}
-		
-		#cookies_header{
+
+		#cookies_header {
 			font-size: 24px !important;
 			font-weight: bold;
 			margin-bottom: 10px;
 		}
 
-		#cookies p{
+		#cookies p {
 			color: #CCC;
 			font-size: 11px;
-			white-space: pre-line;	
+			white-space: pre-line;
 		}
 
-		#cookies_button{
+		#cookies_button {
 			position: relative;
 			background-color: #F005;
 			width: 100px;
@@ -208,17 +210,17 @@
 			cursor: pointer;
 			border: 1px solid #F003;
 		}
-		
-		#cookies_button p{
+
+		#cookies_button p {
 			position: relative;
 			top: 2px;
 			font-size: 16px !important;
 			font-weight: bold;
 		}
-		
+
 		/* --- HOME --- */
-	
-		#home_container{
+
+		#home_container {
 			position: absolute;
 			top: 0px;
 			left: 0px;
@@ -229,7 +231,7 @@
 			transition: opacity 0.5s linear;
 		}
 
-		#home_box{
+		#home_box {
 			position: absolute;
 			width: 840px;
 			height: 472px;
@@ -237,33 +239,33 @@
 			left: calc(50% - 420px);
 		}
 
-		#home_logo_box{
+		#home_logo_box {
 			position: absolute;
 			width: 100%;
 			top: -160px;
 		}
 
-		#home_logo{
-			background-image:url('./images/logo.png');
+		#home_logo {
+			background-image: url('./images/logo.png');
 			position: relative;
 			width: 274px;
 			height: 189px;
 			margin: 0 auto;
 		}
 
-		#awakening_image{
+		#awakening_image {
 			position: relative;
 			width: 840px;
 			height: 472px;
 			border-radius: 25px;
 			background-color: #000;
 			box-shadow: 0px 0px 10px #000;
-			background-image:url('./images/awakening.jpg');
+			background-image: url('./images/awakening.jpg');
 		}
-		
+
 		/* --- EXPLORE  --- */
-		
-		#explore_container{
+
+		#explore_container {
 			position: absolute;
 			top: 0px;
 			left: 0px;
@@ -274,7 +276,7 @@
 			transition: opacity 0.5s linear;
 		}
 
-		.row2{
+		.row2 {
 			display: flex;
 			margin-left: 0px;
 			margin-right: 0px;
@@ -291,7 +293,7 @@
 			border-radius: 4px;
 			padding-top: 45px;
 		}
-		
+
 		.right {
 			position: relative;
 			width: 828px;
@@ -309,7 +311,7 @@
 			height: 30px;
 			font-size: 18px;
 			padding: 11px;
-			border:1px solid #ddd;
+			border: 1px solid #ddd;
 			color: #1c1c1c;
 			border-radius: 12px;
 			margin-bottom: 10px;
@@ -317,8 +319,8 @@
 			right: 4px;
 			top: 10px;
 		}
-		
-		#searchBox{
+
+		#searchBox {
 			position: absolute;
 			right: 28px;
 			top: 43px;
@@ -345,8 +347,8 @@
 			display: block;
 			box-shadow: 0px 0px 1px #000;
 		}
-		
-		#golden_treasure{
+
+		#golden_treasure {
 			position: relative;
 			top: 50px;
 			width: 1107px;
@@ -358,14 +360,14 @@
 			margin-right: auto;
 			border-radius: 5px;
 		}
-		
-		#map{
+
+		#map {
 			position: absolute;
 			top: -1px;
 			visibility: hidden;
 		}
 
-		#menu_list{
+		#menu_list {
 			position: absolute;
 			top: 50px;
 			left: 50px;
@@ -373,7 +375,7 @@
 			display: none;
 			z-index: 100;
 		}
-		
+
 		/* ----- Slider ----- */
 		.slidecontainer {
 			position: absolute;
@@ -396,7 +398,7 @@
 			left: 35px;
 			top: 684px;
 		}
-		
+
 		.slider::-webkit-slider-thumb {
 			-webkit-appearance: none;
 			appearance: none;
@@ -406,10 +408,10 @@
 			cursor: pointer;
 			border-radius: 50%;
 		}
-		
+
 		/* --- SKILLS  --- */
-		
-		#skills_container{
+
+		#skills_container {
 			position: absolute;
 			top: 0px;
 			left: 0px;
@@ -419,22 +421,40 @@
 			transition: opacity 0.5s linear;
 		}
 
-		img, .dropdown-item{
+		img,
+		.dropdown-item {
 			-webkit-user-drag: none;
 			-khtml-user-drag: none;
 			-moz-user-drag: none;
 			-o-user-drag: none;
 		}
-		
-		.max, .max_hover, .max_locked, .min, .min_hover, .min_locked, .minus, .minus_hover, .minus_locked, .plus, .plus_hover, .plus_locked, .skill, .skill:hover:after, .locked:before, .skill_12:before, .bar, .rank_bar_img{
+
+		.max,
+		.max_hover,
+		.max_locked,
+		.min,
+		.min_hover,
+		.min_locked,
+		.minus,
+		.minus_hover,
+		.minus_locked,
+		.plus,
+		.plus_hover,
+		.plus_locked,
+		.skill,
+		.skill:hover:after,
+		.locked:before,
+		.skill_12:before,
+		.bar,
+		.rank_bar_img {
 			background: url('./images/sprites.png') no-repeat;
 		}
 
-		.calcBox{
+		.calcBox {
 			transform: scale(0.8);
 		}
 
-		#window{
+		#window {
 			background-image: url(./images/window_new.jpg);
 			width: 988px;
 			height: 910px;
@@ -448,7 +468,7 @@
 			background-position: 0px 12px;
 		}
 
-		#rank_bar{
+		#rank_bar {
 			position: absolute;
 			top: 82px;
 			left: 17px;
@@ -456,7 +476,7 @@
 			height: 772px;
 		}
 
-		#rank2_bg{
+		#rank2_bg {
 			position: absolute;
 			background-image: url(./images/window_new_2_2.jpg);
 			width: 743px;
@@ -466,7 +486,7 @@
 			display: none;
 		}
 
-		.rank_bar_icon{
+		.rank_bar_icon {
 			position: relative;
 			width: 100%;
 			height: 135px;
@@ -474,7 +494,7 @@
 			cursor: pointer;
 		}
 
-		.rank_bar_img{
+		.rank_bar_img {
 			position: relative;
 			width: 70px;
 			height: 82px;
@@ -482,23 +502,23 @@
 			top: calc(50% - 41px);
 		}
 
-		#rbi1{
+		#rbi1 {
 			background-position: 0px -152px;
 		}
-		
-		#rbi1.selected{
+
+		#rbi1.selected {
 			background-position: -71px -152px !important;
 		}
 
-		#rbi2{
+		#rbi2 {
 			background-position: -142px -152px;
 		}
-		
-		#rbi3{
+
+		#rbi3 {
 			background-position: -284px -152px;
 		}
-		
-		.rank_bar_icon p{
+
+		.rank_bar_icon p {
 			position: absolute;
 			top: 95px;
 			left: 0px;
@@ -508,7 +528,7 @@
 			font-size: 14px;
 		}
 
-		#levels_bar{
+		#levels_bar {
 			position: absolute;
 			color: #888;
 			top: 82px;
@@ -520,42 +540,42 @@
 			text-shadow: 0px 0px 4px #000;
 		}
 
-		.levels_bar_text:first-child{
+		.levels_bar_text:first-child {
 			margin-bottom: 208px;
 		}
 
-		.levels_bar_text{
+		.levels_bar_text {
 			margin-bottom: 100px;
 		}
 
-		#lines{
+		#lines {
 			position: absolute;
 			width: 847px;
 			height: 910px;
 			left: 145px;
 		}
 
-		.row{
+		.row {
 			position: relative;
 			left: 255px;
 			width: 747px;
 			height: 772px;
 		}
 
-		.col-3{
+		.col-3 {
 			position: relative;
 			top: 80px;
 			border-radius: 24px;
 			width: 100px;
 		}
 
-		.skill_box{
+		.skill_box {
 			width: 110px;
 			height: 113px;
 			margin: 10px;
 		}
 
-		.bar{
+		.bar {
 			position: relative;
 			background-position: 0 -95px;
 			width: 107px;
@@ -564,7 +584,7 @@
 			left: 2px;
 		}
 
-		.skill_text{
+		.skill_text {
 			color: white;
 			display: flex;
 			align-items: center;
@@ -573,7 +593,7 @@
 			font-size: 14px;
 		}
 
-		.plus{
+		.plus {
 			position: relative;
 			left: 80px;
 			top: 5px;
@@ -583,7 +603,7 @@
 			cursor: pointer;
 		}
 
-		.minus{
+		.minus {
 			position: relative;
 			top: 41px;
 			background-position: -443px 0;
@@ -592,7 +612,7 @@
 			cursor: pointer;
 		}
 
-		.max{
+		.max {
 			position: relative;
 			top: 41px;
 			background-position: -251px 0;
@@ -601,7 +621,7 @@
 			cursor: pointer;
 		}
 
-		.min{
+		.min {
 			position: relative;
 			left: 80px;
 			top: 5px;
@@ -610,16 +630,16 @@
 			height: 36px;
 			cursor: pointer;
 		}
-		
-		.plus_locked{
+
+		.plus_locked {
 			background-position: -507px -39px;
 		}
 
-		.minus_locked{
+		.minus_locked {
 			background-position: -507px 0;
 		}
-		
-		.skill{
+
+		.skill {
 			background-position: -368px -39px;
 			position: relative;
 			left: 19px;
@@ -628,14 +648,14 @@
 			height: 84px;
 			z-index: 2;
 		}
-		
-		.point_box{
+
+		.point_box {
 			position: relative;
 			left: 0px;
 			top: -185px;
 		}
 
-		.skillImage{
+		.skillImage {
 			position: relative;
 			width: 43px;
 			height: 50px;
@@ -646,7 +666,7 @@
 			background-repeat: no-repeat;
 		}
 
-		#skill_points{
+		#skill_points {
 			position: relative;
 			width: 270px;
 			height: 34px;
@@ -655,7 +675,7 @@
 			margin: 0;
 		}
 
-		#skill_points p{
+		#skill_points p {
 			position: relative;
 			font-size: 15px;
 			color: white;
@@ -665,7 +685,7 @@
 			top: 9px;
 		}
 
-		#skill_points #skillPointNumber{
+		#skill_points #skillPointNumber {
 			position: relative;
 			color: #dcc134;
 			font-size: 21px;
@@ -675,7 +695,7 @@
 			text-align: right;
 		}
 
-		#resetSkills{
+		#resetSkills {
 			position: relative;
 			width: 99px;
 			height: 36px;
@@ -684,16 +704,16 @@
 			margin: 0;
 			cursor: pointer;
 		}
-		
+
 		/* Save and Load Skill Builds */
-		
-		#saveSkillBuild{
+
+		#saveSkillBuild {
 			position: relative;
 			width: 0;
 			height: 0;
 		}
 
-		#saveLabel{
+		#saveLabel {
 			position: relative;
 			width: 148px;
 			height: 38px;
@@ -707,20 +727,20 @@
 			border-style: solid;
 			border-color: rgba(80, 80, 80, 0.8);
 			box-shadow: 0px 1px 3px #111111,
-					inset 1px 1px 1px rgba(100, 100, 100, 0.5), inset -1px 1px 1px rgba(100, 100, 100, 0.5),
-					inset 1px -1px 1px rgba(100, 100, 100, 0.5), inset -1px -1px 1px rgba(100, 100, 100, 0.5);
+				inset 1px 1px 1px rgba(100, 100, 100, 0.5), inset -1px 1px 1px rgba(100, 100, 100, 0.5),
+				inset 1px -1px 1px rgba(100, 100, 100, 0.5), inset -1px -1px 1px rgba(100, 100, 100, 0.5);
 			text-align: center;
 			line-height: 35px;
 			color: #252525;
 			text-shadow: 1px 1px 1px rgba(240, 240, 240, 0.7), -1px 1px 1px rgba(240, 240, 240, 0.7),
-					1px -1px 1px rgba(240, 240, 240, 0.7), -1px -1px 1px rgba(240, 240, 240, 0.7);
+				1px -1px 1px rgba(240, 240, 240, 0.7), -1px -1px 1px rgba(240, 240, 240, 0.7);
 		}
 
-		#saveLabel::before{
+		#saveLabel::before {
 			content: 'Save Build';
 		}
-		
-		#buildNameInput{
+
+		#buildNameInput {
 			width: 9rem;
 			display: none;
 			position: relative;
@@ -728,8 +748,8 @@
 			top: 16px;
 			line-height: 25px;
 		}
-		
-		#loadSkillBuild{
+
+		#loadSkillBuild {
 			position: relative;
 			height: 38px;
 			left: 553px;
@@ -738,22 +758,22 @@
 			cursor: pointer;
 		}
 
-		#loadBuildButton{
+		#loadBuildButton {
 			background-image: linear-gradient(#EEEEEE, #C5C5C5, #F6F6F6);
 			border-radius: 5px;
 			border-width: 1px;
 			border-style: solid;
 			border-color: rgba(80, 80, 80, 0.8);
 			box-shadow: 0px 1px 3px #111111,
-					inset 1px 1px 1px rgba(100, 100, 100, 0.5), inset -1px 1px 1px rgba(100, 100, 100, 0.5),
-					inset 1px -1px 1px rgba(100, 100, 100, 0.5), inset -1px -1px 1px rgba(100, 100, 100, 0.5);
+				inset 1px 1px 1px rgba(100, 100, 100, 0.5), inset -1px 1px 1px rgba(100, 100, 100, 0.5),
+				inset 1px -1px 1px rgba(100, 100, 100, 0.5), inset -1px -1px 1px rgba(100, 100, 100, 0.5);
 			width: 148px;
 			font-family: inherit;
-			text-shadow: 	1px 1px 1px #EEEEEE, -1px 1px 1px #EEEEEE,
-					1px -1px 1px #EEEEEE, -1px -1px 1px #EEEEEE;
+			text-shadow: 1px 1px 1px #EEEEEE, -1px 1px 1px #EEEEEE,
+				1px -1px 1px #EEEEEE, -1px -1px 1px #EEEEEE;
 		}
 
-		#selectJob{
+		#selectJob {
 			position: relative;
 			width: 119px;
 			height: 36px;
@@ -761,13 +781,13 @@
 			bottom: 20px;
 		}
 
-		#jobDrop{
+		#jobDrop {
 			position: relative;
 			left: 848px;
 			bottom: 56px;
 		}
 
-		#jobDrop2{
+		#jobDrop2 {
 			position: absolute;
 			left: 147px;
 			top: 34px;
@@ -780,23 +800,23 @@
 			left: 151px;
 		}
 
-		#jobDrop button{
+		#jobDrop button {
 			background-color: #0000;
 			width: 118px;
 			height: 36px;
 		}
 
-		#jobDrop2 button{
+		#jobDrop2 button {
 			background-color: #0000;
 			width: 168px;
 			height: 31px;
 		}
-				
-		#jobDrop button:after{
+
+		#jobDrop button:after {
 			display: none;
 		}
-		
-		#jobName{
+
+		#jobName {
 			position: absolute;
 			left: 149px;
 			top: 34px;
@@ -805,13 +825,13 @@
 			text-align: center;
 		}
 
-		#jobName p{
+		#jobName p {
 			font-size: 18px;
 			margin-top: 4px;
 			text-shadow: white 2px 2px;
 		}
 
-		.locked:before{
+		.locked:before {
 			content: "";
 			position: absolute;
 			width: 28px;
@@ -823,7 +843,7 @@
 			pointer-events: none;
 		}
 
-		.skill_12:before{
+		.skill_12:before {
 			content: "";
 			width: 28px;
 			height: 22px;
@@ -836,11 +856,11 @@
 		}
 
 		#container {
-		   min-height:100%;
-		   position:relative;
+			min-height: 100%;
+			position: relative;
 		}
 
-		#lapenshard_box{
+		#lapenshard_box {
 			transform: scale(0.8);
 			background-image: url(./images/lapenshard.jpg);
 			width: 927px;
@@ -852,8 +872,8 @@
 			background-repeat: no-repeat;
 			display: none;
 		}
-		
-		#skill_icon{
+
+		#skill_icon {
 			position: absolute;
 			top: 18px;
 			left: 12px;
@@ -862,8 +882,8 @@
 			background-image: url(./images/sprites.png);
 			background-position: -482px -129px;
 		}
-		
-		#skill_title{
+
+		#skill_title {
 			position: absolute;
 			top: 27px;
 			left: 65px;
@@ -871,42 +891,44 @@
 			color: #eee;
 			text-shadow: 0px 0px 2px #000, 2px 2px 1px #000, 2px 2px 2px #000;
 		}
-		
+
 		/* INFO STUFF */
-		
-		#info_box{
+
+		#info_box {
 			position: absolute;
 			left: 100px;
 			top: 100px;
-			border: 1px solid rgba(55,55,55,.9);
+			border: 1px solid rgba(55, 55, 55, .9);
 			box-shadow: 0px 0px 5px #000;
 			border-radius: 4px;
 			display: none;
 			z-index: 250;
 		}
-
 	</style>
-	
+
 	<link defer rel="stylesheet" href="stylesheets/index.min.css">
-	
+
 </head>
+
 <body>
 
 	<div id="container">
-	
+
 		<div id="cookies">
-			
+
 			<p id="cookies_header">Cookies!</p>
-			
+
 			<p>This site uses cookies to remember some of your stuff.
-			Using this fansite means that you are okey with this.</p>
-			
-			<div id="cookies_button"><p>OK</p></div>
-			
+				Using this fansite means that you are okey with this.</p>
+
+			<div id="cookies_button">
+				<p>OK</p>
+			</div>
+
 		</div>
-		
+
 		<div id="arrow_container">
-		
+
 			<div onclick="changePage('backward')" id="arrow_left">
 				<img src="./images/arrow.png" alt="arrow_left">
 				<p id="arrow_left_text">Skills</p>
@@ -915,305 +937,521 @@
 				<img src="./images/arrow.png" alt="arrow_right">
 				<p id="arrow_right_text">Explore</p>
 			</div>
-			
+
 		</div>
-		
+
 		<!-- HOME START -->
-		
+
 		<div id="home_container">
-				
+
 			<div id="home_box">
-			
+
 				<div id="awakening_image"></div>
 				<div id="home_logo_box">
 					<div id="home_logo"></div>
 				</div>
-				
+
 			</div>
-		
+
 		</div>
-		
+
 		<!-- HOME END -->
-		
+
 		<!-- EXPLORE START -->
-		
+
 		<div id="explore_container">
-			
+
 			<div id="golden_treasure">
-			
+
 				<div class="row2">
 					<div id="searchBox">
 						<input type="text" id="mySearch" onkeyup="mapSearch()" placeholder="Search..">
 					</div>
-				  <div class="left">
-					<ul id="myMenu">
-					  <li><a class="mapName" data-id="0" onclick="map('RoyalRoadPlaza', 0)" href="#RoyalRoadPlaza">皇家大道入口 (0/8)</a></li>
-					  <li><a class="mapName" data-id="1" onclick="map('SouthRoyalRoad', 1)" href="#SouthRoyalRoad">皇家大道南部 (0/8)</a></li>
-					  <li><a class="mapName" data-id="2" onclick="map('HushwoodVale', 2)" href="#HushwoodVale">寂静森林 (0/5)</a></li>
-					  <li><a class="mapName" data-id="3" onclick="map('CrookedCanyon', 3)" href="#CrookedCanyon">蜿蜒峡谷 (0/2)</a></li>
-					  <li><a class="mapName" data-id="4" onclick="map('NorthRoyalRoad', 4)" href="#NorthRoyalRoad">皇家大道北部 (0/11)</a></li>
-					  <li><a class="mapName" data-id="5" onclick="map('LudibriumCrater', 5)" href="#LudibriumCrater">玩具城陨石 (0/2)</a></li>
-					  <li><a class="mapName" data-id="6" onclick="map('RevoldicDam', 6)" href="#RevoldicDam">瑞布迪大坝 (0/5)</a></li>
-					  <li><a class="mapName" data-id="7" onclick="map('KerningInterchange', 7)" href="#KerningInterchange">黑金市高速 (0/3)</a></li>
-					  <li><a class="mapName" data-id="8" onclick="map('GoldenTower8F', 8)" href="#GoldenTower8F">黄金塔8层 (0/4)</a></li>
-					  <li><a class="mapName" data-id="9" onclick="map('SylvanWoodsTrail', 9)" href="#SylvanWoodsTrail">绿森林小径 (0/2)</a></li>
-					  <li><a class="mapName" data-id="10" onclick="map('KerningJunkyard', 10)" href="#KerningJunkyard">黑金市废物处理场 (0/4)</a></li>
-					  <li><a class="mapName" data-id="11" onclick="map('FairyTreeLake', 11)" href="#FairyTreeLake">妖精树湖 (0/3)</a></li>
-					  <li><a class="mapName" data-id="12" onclick="map('BarrotaShore', 12)" href="#BarrotaShore">巴洛塔海岸工地 (0/2)</a></li>
-					  <li><a class="mapName" data-id="13" onclick="map('Lavaworks', 13)" href="#Lavaworks">熔岩开发区 (0/2)</a></li>
-					  <li><a class="mapName" data-id="14" onclick="map('Beachway111', 14)" href="#Beachway111">黄金海岸“111” (0/2)</a></li>
-					  <li><a class="mapName" data-id="15" onclick="map('BoulderwhiteMountains', 15)" href="#BoulderwhiteMountains">白岩山 (0/3)</a></li>
-					  <!-- <li><a class="mapName" data-id="16" onclick="map('NoxiousGrotto', 16)" href="#NoxiousGrotto">毒液洞穴 (0/3)</a></li> -->
-					  <li><a class="mapName" data-id="17" onclick="map('BarrotaPort', 17)" href="#BarrotaPort">巴洛塔贸易港 (0/7)</a></li>
-					  <li><a class="mapName" data-id="18" onclick="map('Frostheart', 18)" href="#Frostheart">冰冷心脏 (0/3)</a></li>
-					  <li><a class="mapName" data-id="19" onclick="map('FloraAvenue', 19)" href="#FloraAvenue">花都大街 (0/9)</a></li>
-					  <li><a class="mapName" data-id="20" onclick="map('SufferingWasteland', 20)" href="#SufferingWasteland">痛苦荒地 (0/3)</a></li>
-					  <li><a class="mapName" data-id="21" onclick="map('Woodward', 21)" href="#Woodward">伍德伯里 (0/4)</a></li>
-					  <!--<li><a class="mapName" data-id="22" onclick="map('EnigmaArcade', 22)" href="#EnigmaArcade">秘密游戏厅 (0/4)</a></li>-->
-					  <li><a class="mapName" data-id="23" onclick="map('LoggersHill', 23)" href="#Logger'sHill">Logger's Hill (0/2)</a></li>
-					  <li><a class="mapName" data-id="24" onclick="map('AbandonedCharnelHouse', 24)" href="#AbandonedCharnelHouse">废弃骨灰堂 (0/6)</a></li>
-					  <li><a class="mapName" data-id="25" onclick="map('Spectrumwood', 25)" href="#Spectrumwood">五彩森林 (0/7)</a></li>
-					  <li><a class="mapName" data-id="26" onclick="map('FellowstoneConstruction', 26)" href="#FellowstoneConstruction">洛菲尔大厦工地 (0/2)</a></li>
-					  <li><a class="mapName" data-id="27" onclick="map('Mounthill', 27)" href="#Mounthill">蒙特山 (0/9)</a></li>
-					  <li><a class="mapName" data-id="28" onclick="map('GoldusPharmaceuticals', 28)" href="#GoldusPharmaceuticals">格尔多斯制药工厂 (0/2)</a></li>
-					  <li><a class="mapName" data-id="29" onclick="map('NeuronDNAResearchCenter', 29)" href="#NeuronDNAResearchCenter">基因科研中心 (0/2)</a></li>
-					  <li><a class="mapName" data-id="30" onclick="map('ShadowGate', 30)" href="#ShadowGate">阴影之门 (0/2)</a></li>
-					  <li><a class="mapName" data-id="31" onclick="map('AndreaBarony', 31)" href="#AndreaBarony">安德雷亚家族领地 (0/3)</a></li>
-					  <li><a class="mapName" data-id="32" onclick="map('TrinianCrossing', 32)" href="#TrinianCrossing">特里尼安街 (0/11)</a></li>
-					  <li><a class="mapName" data-id="33" onclick="map('EllinGrove', 33)" href="#EllinGrove">艾琳森林 (0/2)</a></li>
-					  <li><a class="mapName" data-id="34" onclick="map('EllbosHollow', 34)" href="#Ellbo'sHollow">Ellbo's Hollow (0/3)</a></li>
-					  <li><a class="mapName" data-id="35" onclick="map('MajoreLakePark', 35)" href="#MajoreLakePark">玛乔雷公园 (0/5)</a></li>
-					  <li><a class="mapName" data-id="36" onclick="map('TorharaSpring', 36)" href="#TorharaSpring">托尔哈泉水 (0/2)</a></li>
-					  <li><a class="mapName" data-id="37" onclick="map('TrinketWoods', 37)" href="#TrinketWoods">玩具森林 (0/7)</a></li>
-					  <li><a class="mapName" data-id="38" onclick="map('HotottotRiver', 38)" href="#HotottotRiver">灼热河畔 (0/3)</a></li>
-					  <li><a class="mapName" data-id="39" onclick="map('LavaEyeNest', 39)" href="#LavaEyeNest">熔岩独眼怪巢穴 (0/2)</a></li>
-					  <li><a class="mapName" data-id="40" onclick="map('PrismFalls', 40)" href="#PrismFalls">冰冻瀑布 (0/2)</a></li>
-					  <li><a class="mapName" data-id="41" onclick="map('RazedForest', 41)" href="#RazedForest">干旱伐木场 (0/3)</a></li>
-					  <li><a class="mapName" data-id="42" onclick="map('MistyTemple', 42)" href="#MistyTemple">迷雾寺院 (0/3)</a></li>
-					  <li><a class="mapName" data-id="43" onclick="map('StoneQuarry', 43)" href="#StoneQuarry">风柱采石场 (0/3)</a></li>
-					  <li><a class="mapName" data-id="44" onclick="map('StonehillDigSite', 44)" href="#StonehillDigSite">石柱岭挖掘场 (0/3)</a></li>
-					  <li><a class="mapName" data-id="45" onclick="map('ParuvanPlateau', 45)" href="#ParuvanPlateau">佩鲁高原 (0/3)</a></li>
-					  <li><a class="mapName" data-id="46" onclick="map('BonebridgeWorksite', 46)" href="#BonebridgeWorksite">骨桥工地 (0/3)</a></li>
-					  <li><a class="mapName" data-id="47" onclick="map('WindsongRavine', 47)" href="#WindsongRavine">风声峡谷 (0/3)</a></li>
-					  <li><a class="mapName" data-id="48" onclick="map('BaumTree', 48)" href="#BaumTree">巴翁树 (0/2)</a></li>
-					  <li><a class="mapName" data-id="49" onclick="map('WestWatchtower', 49)" href="#WestWatchtower">西部监视塔 (0/3)</a></li>
-					  <li><a class="mapName" data-id="50" onclick="map('ForgottenKeep', 50)" href="#ForgottenKeep">遗忘城堡 (0/5)</a></li>
-					  <li><a class="mapName" data-id="51" onclick="map('MoltenHourglass', 51)" href="#MoltenHourglass">熔化沙漏 (0/2)</a></li>
-					  <li><a class="mapName" data-id="52" onclick="map('AntTunnelEntrance', 52)" href="#AntTunnelEntrance">蚂蚁洞入口 (0/2)</a></li>
-					  <li><a class="mapName" data-id="53" onclick="map('WestWindHill', 53)" href="#WestWindHill">西部山丘 (0/7)</a></li>
-					  <li><a class="mapName" data-id="54" onclick="map('PicchuPicchuGardens', 54)" href="#PicchuPicchuGardens">空中庭院 (0/5)</a></li>
-					  <li><a class="mapName" data-id="55" onclick="map('HenesysDocks', 55)" href="#HenesysDocks">射手村渡口 (0/4)</a></li>
-					  <li><a class="mapName" data-id="56" onclick="map('PrecipiceFortress', 56)" href="#PrecipiceFortress">陡峭绝壁要塞 (0/3)</a></li>
-					  <li><a class="mapName" data-id="57" onclick="map('Sweetskirts', 57)" href="#Sweetskirts">糖果山丘 (0/3)</a></li>
-					  <li><a class="mapName" data-id="58" onclick="map('ForestofLostMemories', 58)" href="#ForestofLostMemories">失忆森林 (0/2)</a></li>
-					  <li><a class="mapName" data-id="59" onclick="map('AntTunnelPlaza', 59)" href="#AntTunnelPlaza">蚂蚁洞广场 (0/2)</a></li>
-					  <!-- <li><a class="mapName" data-id="60" onclick="map('GreenoCrossing', 60)" href="#GreenoCrossing"> (0/3)</a></li> -->
-					  <li><a class="mapName" data-id="61" onclick="map('SweetToothValley', 61)" href="#SweetToothValley">甜蜜山谷 (0/3)</a></li>
-					  <li><a class="mapName" data-id="62" onclick="map('VerdantHeights', 62)" href="#VerdantHeights">格里诺岔道 (0/3)</a></li>
-					  <li><a class="mapName" data-id="63" onclick="map('CoronaLake', 63)" href="#CoronaLake">日冕湖 (0/3)</a></li>
-					  <li><a class="mapName" data-id="64" onclick="map('LavaSprings', 64)" href="#LavaSprings">熔岩温泉 (0/4)</a></li>
-					  <li><a class="mapName" data-id="65" onclick="map('GreatEllinTrees', 65)" href="#GreatEllinTrees"> (0/8)</a></li>
-					  <li><a class="mapName" data-id="66" onclick="map('MoonglowForest', 66)" href="#MoonglowForest">月光森林 (0/9)</a></li>
-					  <!-- <li><a class="mapName" data-id="67" onclick="map('ForestofLife', 67)" href="#ForestofLife">生命森林 (0/3)</a></li> -->
-					  <li><a class="mapName" data-id="68" onclick="map('Godspring', 68)" href="#Godspring">神之泉 (0/3)</a></li>
-					  <li><a class="mapName" data-id="69" onclick="map('SandDunes', 69)" href="#SandDunes">粗砂山丘 (0/5)</a></li>
-					  <li><a class="mapName" data-id="70" onclick="map('BesherelMagicLibrary', 70)" href="#BesherelMagicLibrary">密林图书馆 (0/3)</a></li>
-					  <li><a class="mapName" data-id="71" onclick="map('BreezyHills', 71)" href="#BreezyHills">微风岭 (0/3)</a></li>
-					  <li><a class="mapName" data-id="72" onclick="map('ElluaForestPath', 72)" href="#ElluaForestPath">露亚森林 (0/3)</a></li>
-					  <li><a class="mapName" data-id="73" onclick="map('EllinRuins', 73)" href="#EllinRuins">艾琳遗迹 (0/6)</a></li>
-					  <li><a class="mapName" data-id="74" onclick="map('GreeniaFalls', 74)" href="#GreeniaFalls">格里尼亚瀑布 (0/2)</a></li>
-					  <li><a class="mapName" data-id="75" onclick="map('ElluaRiverside', 75)" href="#ElluaRiverside">露亚河畔 (0/3)</a></li>
-					  <li><a class="mapName" data-id="76" onclick="map('FungeeburgStump', 76)" href="#FungeeburgStump">蘑菇丛林 (0/7)</a></li>
-					  <li><a class="mapName" data-id="77" onclick="map('MirrorCastle', 77)" href="#MirrorCastle">重生城堡 (0/3)</a></li>
-					  <li><a class="mapName" data-id="78" onclick="map('TwilightMoonCastle', 78)" href="#TwilightMoonCastle">紫门城堡 (0/3)</a></li>
-					  <li><a class="mapName" data-id="79" onclick="map('SereneDocks', 79)" href="#SereneDocks">寂静渡口 (0/4)</a></li>
-					  <li><a class="mapName" data-id="80" onclick="map('CausticGarden', 80)" href="#CausticGarden">熔化庭院 (0/3)</a></li>
-					  <li><a class="mapName" data-id="81" onclick="map('RainbowMountain', 81)" href="#RainbowMountain">彩虹山 (0/4)</a></li>
-					  <li><a class="mapName" data-id="82" onclick="map('Ellosylva', 82)" href="#Ellosylva">热带雨林 (0/9)</a></li>
-					  <li><a class="mapName" data-id="83" onclick="map('LudibriumCrevasse', 83)" href="#LudibriumCrevasse">玩具城缝隙 (0/2)</a></li>
-					  <li><a class="mapName" data-id="84" onclick="map('TidepoolCliffs', 84)" href="#TidepoolCliffs">漩涡悬崖 (0/6)</a></li>
-					  <li><a class="mapName" data-id="85" onclick="map('CheliskaBay', 85)" href="#CheliskaBay">切利斯卡海湾 (0/4)</a></li>
-					  <li><a class="mapName" data-id="86" onclick="map('OvertopBeanstalk', 86)" href="#OvertopBeanstalk">豆树旷野 (0/2)</a></li>
-					  <li><a class="mapName" data-id="87" onclick="map('BarbosaBeach', 87)" href="#BarbosaBeach">巴尔萨海岸 (0/8)</a></li>
-					  <li><a class="mapName" data-id="88" onclick="map('ClockTowerSquare', 88)" href="#ClockTowerSquare">钟楼广场 (0/2)</a></li>
-					  <li><a class="mapName" data-id="89" onclick="map('RoseCastle', 89)" href="#RoseCastle">玫瑰城 (0/3)</a></li>
-					  <li><a class="mapName" data-id="90" onclick="map('TortugaSeasideCliff', 90)" href="#TortugaSeasideCliff"> (0/3)</a></li>
-					  <li><a class="mapName" data-id="91" onclick="map('Slumberland', 91)" href="#Slumberland">梦幻乐园 (0/3)</a></li>
-					  <li><a class="mapName" data-id="92" onclick="map('MurosMediaPark', 92)" href="#MurosMediaPark">假日影城 (0/5)</a></li>
-					  <li><a class="mapName" data-id="93" onclick="map('RedWall', 93)" href="#RedWall">红色警戒区 (0/4)</a></li>
-					  <li><a class="mapName" data-id="94" onclick="map('WhistlerCliffs', 94)" href="#WhistlerCliffs">红哨悬崖 (0/8)</a></li>
-					  <li><a class="mapName" data-id="95" onclick="map('PigmingClanAltar', 95)" href="#PigmingClanAltar">鸣戈部族祭坛 (0/3)</a></li>
-					  <li><a class="mapName" data-id="96" onclick="map('WolfclawCanyon', 96)" href="#WolfclawCanyon">狼爪峡谷 (0/7)</a></li>
-					  <li><a class="mapName" data-id="97" onclick="map('LudiStation', 97)" href="#LudiStation">玩具城车站 (0/4)</a></li>
-					  <li><a class="mapName" data-id="98" onclick="map('HighcliffTemple', 98)" href="#HighcliffTemple">遗忘神殿 (0/7)</a></li>
-					  <li><a class="mapName" data-id="99" onclick="map('KerningTechnoValley', 99)" href="#KerningTechnoValley">黑金市科技谷 (0/6)</a></li>
-					  <li><a class="mapName" data-id="100" onclick="map('KolopuaCrag', 100)" href="#KolopuaCrag">峭壁庭院 (0/11)</a></li>
-					  <li><a class="mapName" data-id="101" onclick="map('LudiFantasia', 101)" href="#LudiFantasia">玩具幻想曲 (0/3)</a></li>
-					  <li><a class="mapName" data-id="102" onclick="map('MacaroonAcres', 102)" href="#MacaroonAcres">马卡龙小镇 (0/5)</a></li>
-					  <li><a class="mapName" data-id="103" onclick="map('RaptorDivePass', 103)" href="#RaptorDivePass">雄鹰岭 (0/3)</a></li>
-					  <li><a class="mapName" data-id="104" onclick="map('ChronoffTrainStation', 104)" href="#ChronoffTrainStation">克洛诺夫火车站 (0/6)</a></li>
-					  <li><a class="mapName" data-id="105" onclick="map('FrostbunnyPark', 105)" href="#FrostbunnyPark">兔女郎白雪公园 (0/5)</a></li>
-					  <li><a class="mapName" data-id="106" onclick="map('FracturedCanyon', 106)" href="#FracturedCanyon">伤痕峡谷 (0/6)</a></li>
-					  <li><a class="mapName" data-id="107" onclick="map('MagmaResearchStation', 107)" href="#MagmaResearchStation">熔岩能研中心 (0/6)</a></li>
-					  <li><a class="mapName" data-id="108" onclick="map('SkyreachPass', 108)" href="#SkyreachPass">天路 (0/6)</a></li>
-					  <li><a class="mapName" data-id="109" onclick="map('BerrysweetCastle', 109)" href="#BerrysweetCastle">粉心甜蜜城堡 (0/5)</a></li>
-					  <li><a class="mapName" data-id="110" onclick="map('HarrotHill', 110)" href="#HarrotHill">胡萝卜兔子乐园 (0/3)</a></li>
-					  <li><a class="mapName" data-id="111" onclick="map('LudiArcade', 111)" href="#LudiArcade">玩具城游戏厅 (0/4)</a></li>
-					  <li><a class="mapName" data-id="112" onclick="map('CellimentalTestBunker', 112)" href="#CellimentalTestBunker">实验基地 (0/4)</a></li>
-					  <li><a class="mapName" data-id="113" onclick="map('KarnifsFang', 113)" href="#KarnifsFang"> (0/3)</a></li>
-					  <li><a class="mapName" data-id="114" onclick="map('MSLElectronicsInstitute', 114)" href="#MSLElectronicsInstitute">MSI机械研究所 (0/7)</a></li>
-					  <li><a class="mapName" data-id="115" onclick="map('MSLFactory', 115)" href="#MSLFactory">MSI工厂 (0/4)</a></li>
-					  <li><a class="mapName" data-id="116" onclick="map('AntTunnelPassage', 116)" href="#AntTunnelPassage">蚂蚁洞通道 (0/5)</a></li>
-					  <li><a class="mapName" data-id="117" onclick="map('FrostpeakMountain', 117)" href="#FrostpeakMountain">雪花山峰 (0/5)</a></li>
-					  <li><a class="mapName" data-id="118" onclick="map('KernelEnergyResearch', 118)" href="#KernelEnergyResearch">科奈尔能量研究所 (0/5)</a></li>
-					  <li><a class="mapName" data-id="119" onclick="map('FrostemberVoid', 119)" href="#FrostemberVoid">冰冻熔岩洞 (0/5)</a></li>
-					  <li><a class="mapName" data-id="120" onclick="map('SnowscarfHaven', 120)" href="#SnowscarfHaven">白色圣诞节 (0/5)</a></li>
-					  <li><a class="mapName" data-id="121" onclick="map('MSLRobotDevCenter', 121)" href="#MSLRobotDevCenter">MSI研发中心 (0/2)</a></li>
-					  <li><a class="mapName" data-id="122" onclick="map('LavalunaCave', 122)" href="#LavalunaCave">熔岩洞穴 (0/3)</a></li>
-					  <li><a class="mapName" data-id="123" onclick="map('LuditionCarnival', 123)" href="#LuditionCarnival">玩具嘉年华 (0/3)</a></li>
-					  <li><a class="mapName" data-id="124" onclick="map('CaveofEternity', 124)" href="#CaveofEternity">永恒洞穴 (0/10)</a></li>
-					  <li><a class="mapName" data-id="125" onclick="map('LavaCrest', 125)" href="#LavaCrest">熔岩山 (0/6)</a></li>
-					  <li><a class="mapName" data-id="126" onclick="map('Steamerbrook', 126)" href="#Steamerbrook">幻城 (0/5)</a></li>
-					  <li><a class="mapName" data-id="127" onclick="map('Frozencrest', 127)" href="#Frozencrest">冰封王冠 (0/3)</a></li>
-					  <li><a class="mapName" data-id="128" onclick="map('WaterSupplyCenter', 128)" href="#WaterSupplyCenter">供水中心 (0/3)</a></li>
-					  <li><a class="mapName" data-id="129" onclick="map('CrystalfrostWall', 129)" href="#CrystalfrostWall">水晶冰壁 (0/3)</a></li>
-					  <li><a class="mapName" data-id="130" onclick="map('MagmaGorge', 130)" href="#MagmaGorge">岩浆峡谷 (0/6)</a></li>
-					  <!-- <li><a class="mapName" data-id="131" onclick="map('WailingMine', 131)" href="#WailingMine">哀嚎矿山 (0/4)</a></li> -->
-					  <li><a class="mapName" data-id="132" onclick="map('IglooHill', 132)" href="#IglooHill">格鲁斯山 (0/6)</a></li>
-					  <!-- <li><a class="mapName" data-id="133" onclick="map('MagmaTrail', 133)" href="#MagmaTrail">燃烧熔岩路 (0/2)</a></li> -->
-					  <li><a class="mapName" data-id="134" onclick="map('PhantomaCyborgCenter', 134)" href="#PhantomaCyborgCenter">潘托亚机器人中心 (0/5)</a></li>
-					  <li><a class="mapName" data-id="135" onclick="map('KabriumBasin', 135)" href="#KabriumBasin">卡布利安盆地 (0/2)</a></li>
-					  <li><a class="mapName" data-id="136" onclick="map('ChekartaChemicals', 136)" href="#ChekartaChemicals">切卡斯塔化工厂 (0/2)</a></li>
-					  <li><a class="mapName" data-id="137" onclick="map('BlackoutExpanse', 137)" href="#BlackoutExpanse">黑暗外域 (0/4)</a></li>
-					  <li><a class="mapName" data-id="138" onclick="map('OccupiedFellowstone', 138)" href="#OccupiedFellowstone">洛菲尔占领区 (0/2)</a></li>
-					  <li><a class="mapName" data-id="139" onclick="map('DarkCellVirusCenter', 139)" href="#DarkCellVirusCenter">黑格病毒中心 (0/2)</a></li>
-					  <li><a class="mapName" data-id="140" onclick="map('Picardiv', 140)" href="#Picardiv">熔岩禁区 (0/2)</a></li>
-					  <li><a class="mapName" data-id="141" onclick="map('TorravaRiver', 141)" href="#TorravaRiver">红河(PVP区域) (0/3)</a></li>
-					  <li><a class="mapName" data-id="142" onclick="map('VanishedRuins', 142)" href="#VanishedRuins">消失的遗迹(PVP区域) (0/6)</a></li>
-					  <li><a class="mapName" data-id="143" onclick="map('SavageCrossroads', 143)" href="#SavageCrossroads">黑暗岔路(PVP区域) (0/2)</a></li>
-					  <li><a class="mapName" data-id="144" onclick="map('DebloonRanch', 144)" href="#DebloonRanch">德布伦牧场 (0/5)</a></li>
-					  <li><a class="mapName" data-id="145" onclick="map('Stormville', 145)" href="#Stormville">暴风山谷 (0/4)</a></li>
-					  <li><a class="mapName" data-id="146" onclick="map('VictoriasRest', 146)" href="#VictoriasRest"> (0/3)</a></li>
-					  <li><a class="mapName" data-id="147" onclick="map('NorthTyrannyRoad', 147)" href="#NorthTyrannyRoad">黑暗大道北部(PVP区域) (0/7)</a></li>
-					  <li><a class="mapName" data-id="148" onclick="map('SouthTyrannyRoad', 148)" href="#SouthTyrannyRoad">黑暗大道南部(PVP区域) (0/6)</a></li>
-					  <li><a class="mapName" data-id="149" onclick="map('Wallowville', 149)" href="#Wallowville">哀嚎村庄(PVP区域) (0/5)</a></li>
-					  <li><a class="mapName" data-id="150" onclick="map('BittersValley', 150)" href="#BittersValley">苦难山谷(PVP区域) (0/5)</a></li>
-					  <li><a class="mapName" data-id="151" onclick="map('PiercewindHills', 151)" href="#PiercewindHills">刀风岭 (0/3)</a></li>
-					  <li><a class="mapName" data-id="152" onclick="map('StormyHills', 152)" href="#StormyHills">暴风山丘(PVP区域) (0/5)</a></li>
-					  <li><a class="mapName" data-id="153" onclick="map('Demonspring', 153)" href="#Demonspring">恶魔之泪(PVP区域) (0/3)</a></li>
-					  <li><a class="mapName" data-id="154" onclick="map('BlackForest', 154)" href="#BlackForest">黑森林(PVP区域) (0/2)</a></li>
-					  <li><a class="mapName" data-id="155" onclick="map('Calamitysnare', 155)" href="#Calamitysnare">灾难之地(PVP区域) (0/3)</a></li>
-					  <li><a class="mapName" data-id="156" onclick="map('MoldyHollow', 156)" href="#MoldyHollow">霉树洞穴(PVP区域) (0/5)</a></li>
-					  <li><a class="mapName" data-id="157" onclick="map('OutlawsOverlook', 157)" href="#OutlawsOverlook"> (0/4)</a></li>
-					  <li><a class="mapName" data-id="158" onclick="map('BlazingForest', 158)" href="#BlazingForest">燃烧伐木场(PVP区域) (0/5)</a></li>
-					  <li><a class="mapName" data-id="159" onclick="map('InfernalTree', 159)" href="#InfernalTree">地狱树 (0/4)</a></li>
-					  <li><a class="mapName" data-id="160" onclick="map('CocoIsland', 160)" href="#CocoIsland">水族乐园 (0/3)</a></li>
-					  <li><a class="mapName" data-id="161" onclick="map('MeltaDam', 161)" href="#MeltaDam">梅尔塔大坝(PVP区域) (0/5)</a></li>
-					  <li><a class="mapName" data-id="162" onclick="map('ObsidianMount', 162)" href="#ObsidianMount">黑岩山(PVP区域) (0/3)</a></li>
-					  <li><a class="mapName" data-id="163" onclick="map('CozalitaGraveyard', 163)" href="#CozalitaGraveyard">科扎利塔(PVP区域) (0/3)</a></li>
-					  <li><a class="mapName" data-id="164" onclick="map('GloomyForest', 164)" href="#GloomyForest">阴暗森林(PVP区域) (0/6)</a></li>
-					  <li><a class="mapName" data-id="165" onclick="map('SealedForest', 165)" href="#SealedForest">封印森林(PVP区域) (0/6)</a></li>
-					  <li><a class="mapName" data-id="166" onclick="map('RizabIsland', 166)" href="#RizabIsland">钢铁岩石岛 (0/4)</a></li>
-					  <li><a class="mapName" data-id="167" onclick="map('TiaresDesert', 167)" href="#TiaresDesert">迪亚雷斯沙漠 (0/4)</a></li>
-					  <li><a class="mapName" data-id="168" onclick="map('LudariArena', 168)" href="#LudariArena">鲁德利竞技场 (0/4)</a></li>
-					  <li><a class="mapName" data-id="169" onclick="map('TuningMotorsShowroom', 169)" href="#TuningMotorsShowroom">改装汽车公司展示场 (0/4)</a></li>
-					  <li><a class="mapName" data-id="170" onclick="map('LudariStation', 170)" href="#LudariStation">鲁德利列车站 (0/4)</a></li>
-					  <li><a class="mapName" data-id="171" onclick="map('ParadiseCircuit', 171)" href="#ParadiseCircuit">天堂赛车场 (0/5)</a></li>
-					  <li><a class="mapName" data-id="172" onclick="map('LavenderIsland', 172)" href="#LavenderIsland">薰衣草之岛 (0/4)</a></li>
-					  <li><a class="mapName" data-id="173" onclick="map('WestAutoBridge', 173)" href="#WestAutoBridge">卡尔桥西 (0/3)</a></li>
-					  <li><a class="mapName" data-id="174" onclick="map('EastAutoBridge', 174)" href="#EastAutoBridge"> (0/3)</a></li>
-					  <li><a class="mapName" data-id="175" onclick="map('RainbowValley', 175)" href="#RainbowValley">彩虹谷 (0/6)</a></li>
-					  <li><a class="mapName" data-id="176" onclick="map('RedsandHills', 176)" href="#RedsandHills">红色砂石 (0/5)</a></li>
-					  <li><a class="mapName" data-id="177" onclick="map('MoonlightDesert', 177)" href="#MoonlightDesert">月光沙漠 (0/5)</a></li>
-					  <li><a class="mapName" data-id="178" onclick="map('MoonlightGarden', 178)" href="#MoonlightGarden">月光庭院 (0/5)</a></li>
-					  <li><a class="mapName" data-id="179" onclick="map('SandstarRuins', 179)" href="#SandstarRuins">星沙遗迹 (0/5)</a></li>
-					  <li><a class="mapName" data-id="180" onclick="map('NazkarPyramid', 180)" href="#NazkarPyramid">纳兹卡尔入口 (0/5)</a></li>
-					  <li><a class="mapName" data-id="181" onclick="map('NazkarPassageways', 181)" href="#NazkarPassageways">纳兹卡尔通道 (0/4)</a></li>
-					  <li><a class="mapName" data-id="182" onclick="map('NazkarCentralChamber', 182)" href="#NazkarCentralChamber">纳兹卡尔中央 (0/4)</a></li>
-					  <li><a class="mapName" data-id="183" onclick="map('NazkarAltar', 183)" href="#NazkarAltar">纳兹卡尔祭坛 (0/4)</a></li>
-					  <li><a class="mapName" data-id="184" onclick="map('NazkarMainHall', 184)" href="#NazkarMainHall">纳兹卡尔大厅 (0/3)</a></li>
-					  <li><a class="mapName" data-id="185" onclick="map('LudariMall', 185)" href="#LudariMall">萌萌购物中心 (0/5)</a></li>
-					  <li><a class="mapName" data-id="186" onclick="map('TheDeckSkatepark', 186)" href="#TheDeckSkatepark">砰砰公园 (0/3)</a></li>
-					  <li><a class="mapName" data-id="187" onclick="map('Aquatopia', 187)" href="#Aquatopia">丽迪斯水上世界 (0/4)</a></li>
-					  <li><a class="mapName" data-id="188" onclick="map('ExpeditionBase', 188)" href="#ExpeditionBase">斯科佩尔基地 (0/3)</a></li>
-					  <li><a class="mapName" data-id="189" onclick="map('AuroraLaboratory', 189)" href="#AuroraLaboratory">极光研究所 (0/3)</a></li>
-					  <li><a class="mapName" data-id="190" onclick="map('LuluVillage', 190)" href="#LuluVillage">露露村 (0/3)</a></li>
-					  <li><a class="mapName" data-id="191" onclick="map('ForsakenFields', 191)" href="#ForsakenFields">孤寂原野 (0/2)</a></li>
-					  <li><a class="mapName" data-id="192" onclick="map('LionsGate', 192)" href="#Lion'sGate">Lion's Gate (0/4)</a></li>
-					  <li><a class="mapName" data-id="193" onclick="map('BarrenBarony', 193)" href="#BarrenBarony">诅咒领地 (0/4)</a></li>
-					  <li><a class="mapName" data-id="194" onclick="map('Beachway666', 194)" href="#Beachway666">黄金海岸“666” (0/4)</a></li>
-					  <li><a class="mapName" data-id="195" onclick="map('BleakshadowCrossing', 195)" href="#BleakshadowCrossing">黑暗立交路 (0/3)</a></li>
-					  <li><a class="mapName" data-id="196" onclick="map('BleakshadowWasteCenter', 196)" href="#BleakshadowWasteCenter">黑暗废物处理场 (0/4)</a></li>
-					  <li><a class="mapName" data-id="197" onclick="map('BoilingPeaks', 197)" href="#BoilingPeaks">烧焦的彩虹山 (0/4)</a></li>
-					  <li><a class="mapName" data-id="198" onclick="map('BonebridgeRuins', 198)" href="#BonebridgeRuins">骨桥废墟 (0/3)</a></li>
-					  <li><a class="mapName" data-id="199" onclick="map('CorruptedSquare', 199)" href="#CorruptedSquare">黑暗广场 (0/4)</a></li>
-					  <li><a class="mapName" data-id="200" onclick="map('CrystalValeRuins', 200)" href="#CrystalValeRuins">水晶矿山废墟 (0/3)</a></li>
-					  <li><a class="mapName" data-id="201" onclick="map('DarkHeart', 201)" href="#DarkHeart">腐烂心脏 (0/3)</a></li>
-					  <li><a class="mapName" data-id="202" onclick="map('DarkstoneQuarry', 202)" href="#DarkstoneQuarry">黑柱采石场 (0/4)</a></li>
-					  <li><a class="mapName" data-id="203" onclick="map('Deadsville', 203)" href="#Deadsville">黑暗山谷 (0/5)</a></li>
-					  <li><a class="mapName" data-id="204" onclick="map('GrimThoroughfare', 204)" href="#GrimThoroughfare">黑暗特里尼安街 (0/7)</a></li>
-					  <li><a class="mapName" data-id="205" onclick="map('InfernalHourglass', 205)" href="#InfernalHourglass">诅咒沙漏 (0/4)</a></li>
-					  <li><a class="mapName" data-id="206" onclick="map('LavarushValley', 206)" href="#LavarushValley">沸腾熔岩峡谷 (0/4)</a></li>
-					  <li><a class="mapName" data-id="207" onclick="map('LithRuins', 207)" href="#LithRuins">黑暗明珠港 (0/3)</a></li>
-					  <li><a class="mapName" data-id="208" onclick="map('MajoreBog', 208)" href="#MajoreBog">玛乔雷沼泽 (0/5)</a></li>
-					  <li><a class="mapName" data-id="209" onclick="map('PhantasmFalls', 209)" href="#PhantasmFalls">灵魂瀑布 (0/3)</a></li>
-					  <li><a class="mapName" data-id="210" onclick="map('RavagedHenesys', 210)" href="#RavagedHenesys">黑暗射手村 (0/3)</a></li>
-					  <li><a class="mapName" data-id="211" onclick="map('ShadowFactory', 211)" href="#ShadowFactory">黑暗奴役场 (0/5)</a></li>
-					  <li><a class="mapName" data-id="212" onclick="map('ShadowFortress', 212)" href="#ShadowFortress">暗黑城堡 (0/4)</a></li>
-					  <li><a class="mapName" data-id="213" onclick="map('ShattofyerRiver', 213)" href="#ShattofyerRiver">火狱河畔 (0/3)</a></li>
-					  <li><a class="mapName" data-id="214" onclick="map('SilentStreets', 214)" href="#SilentStreets">沉寂大道 (0/6)</a></li>
-					  <li><a class="mapName" data-id="215" onclick="map('SnagwoodForest', 215)" href="#SnagwoodForest">枯树森林 (0/4)</a></li>
-					  <li><a class="mapName" data-id="216" onclick="map('SpecterWoodsTrail', 216)" href="#SpecterWoodsTrail">灵魂森林小径 (0/4)</a></li>
-					  <li><a class="mapName" data-id="217" onclick="map('StormForge', 217)" href="#StormForge">暴风洛伯斯坦 (0/2)</a></li>
-					  <li><a class="mapName" data-id="218" onclick="map('TumultuousDocks', 218)" href="#TumultuousDocks">地狱渡口 (0/4)</a></li>
-					  <li><a class="mapName" data-id="219" onclick="map('TurkasWatchtower', 219)" href="#Turka'sWatchtower">Turka's Watchtower (0/3)</a></li>
-					  <li><a class="mapName" data-id="220" onclick="map('TyrranyRoadPlaza', 220)" href="#TyrranyRoadPlaza"> (0/5)</a></li>
-					  <li><a class="mapName" data-id="221" onclick="map('WailingCragFortress', 221)" href="#WailingCragFortress">哀嚎绝壁要塞 (0/4)</a></li>
-					</ul>
-				  </div>
-				  
-				<div class="slidecontainer">
-					<input type="range" min="1" max="10" value="10" class="slider" id="myRange">
-				</div>
-				  
-				  <div class="right" id="right">
-					<img id="map" onclick="pos(event)" width="828" height="791" draggable="false">
-					
-					<div class="loader">
-						<div class="loader_2"></div>
-						<div class="loader_3"></div>
+					<div class="left">
+						<ul id="myMenu">
+							<li><a class="mapName" data-id="0" onclick="map('RoyalRoadPlaza', 0)"
+									href="#RoyalRoadPlaza">皇家大道入口 (0/8)</a></li>
+							<li><a class="mapName" data-id="1" onclick="map('SouthRoyalRoad', 1)"
+									href="#SouthRoyalRoad">皇家大道南部 (0/8)</a></li>
+							<li><a class="mapName" data-id="2" onclick="map('HushwoodVale', 2)"
+									href="#HushwoodVale">寂静森林 (0/5)</a></li>
+							<li><a class="mapName" data-id="3" onclick="map('CrookedCanyon', 3)"
+									href="#CrookedCanyon">蜿蜒峡谷 (0/2)</a></li>
+							<li><a class="mapName" data-id="4" onclick="map('NorthRoyalRoad', 4)"
+									href="#NorthRoyalRoad">皇家大道北部 (0/11)</a></li>
+							<li><a class="mapName" data-id="5" onclick="map('LudibriumCrater', 5)"
+									href="#LudibriumCrater">玩具城陨石 (0/2)</a></li>
+							<li><a class="mapName" data-id="6" onclick="map('RevoldicDam', 6)" href="#RevoldicDam">瑞布迪大坝
+									(0/5)</a></li>
+							<li><a class="mapName" data-id="7" onclick="map('KerningInterchange', 7)"
+									href="#KerningInterchange">黑金市高速 (0/3)</a></li>
+							<li><a class="mapName" data-id="8" onclick="map('GoldenTower8F', 8)"
+									href="#GoldenTower8F">黄金塔8层 (0/4)</a></li>
+							<li><a class="mapName" data-id="9" onclick="map('SylvanWoodsTrail', 9)"
+									href="#SylvanWoodsTrail">绿森林小径 (0/2)</a></li>
+							<li><a class="mapName" data-id="10" onclick="map('KerningJunkyard', 10)"
+									href="#KerningJunkyard">黑金市废物处理场 (0/4)</a></li>
+							<li><a class="mapName" data-id="11" onclick="map('FairyTreeLake', 11)"
+									href="#FairyTreeLake">妖精树湖 (0/3)</a></li>
+							<li><a class="mapName" data-id="12" onclick="map('BarrotaShore', 12)"
+									href="#BarrotaShore">巴洛塔海岸工地 (0/2)</a></li>
+							<li><a class="mapName" data-id="13" onclick="map('Lavaworks', 13)" href="#Lavaworks">熔岩开发区
+									(0/2)</a></li>
+							<li><a class="mapName" data-id="14" onclick="map('Beachway111', 14)"
+									href="#Beachway111">黄金海岸“111” (0/2)</a></li>
+							<li><a class="mapName" data-id="15" onclick="map('BoulderwhiteMountains', 15)"
+									href="#BoulderwhiteMountains">白岩山 (0/3)</a></li>
+							<!-- <li><a class="mapName" data-id="16" onclick="map('NoxiousGrotto', 16)" href="#NoxiousGrotto">毒液洞穴 (0/3)</a></li> -->
+							<li><a class="mapName" data-id="17" onclick="map('BarrotaPort', 17)"
+									href="#BarrotaPort">巴洛塔贸易港 (0/7)</a></li>
+							<li><a class="mapName" data-id="18" onclick="map('Frostheart', 18)" href="#Frostheart">冰冷心脏
+									(0/3)</a></li>
+							<li><a class="mapName" data-id="19" onclick="map('FloraAvenue', 19)"
+									href="#FloraAvenue">花都大街 (0/9)</a></li>
+							<li><a class="mapName" data-id="20" onclick="map('SufferingWasteland', 20)"
+									href="#SufferingWasteland">痛苦荒地 (0/3)</a></li>
+							<li><a class="mapName" data-id="21" onclick="map('Woodward', 21)" href="#Woodward">伍德伯里
+									(0/4)</a></li>
+							<!--<li><a class="mapName" data-id="22" onclick="map('EnigmaArcade', 22)" href="#EnigmaArcade">秘密游戏厅 (0/4)</a></li>-->
+							<li><a class="mapName" data-id="23" onclick="map('LoggersHill', 23)"
+									href="#Logger'sHill">Logger's Hill (0/2)</a></li>
+							<li><a class="mapName" data-id="24" onclick="map('AbandonedCharnelHouse', 24)"
+									href="#AbandonedCharnelHouse">废弃骨灰堂 (0/6)</a></li>
+							<li><a class="mapName" data-id="25" onclick="map('Spectrumwood', 25)"
+									href="#Spectrumwood">五彩森林 (0/7)</a></li>
+							<li><a class="mapName" data-id="26" onclick="map('FellowstoneConstruction', 26)"
+									href="#FellowstoneConstruction">洛菲尔大厦工地 (0/2)</a></li>
+							<li><a class="mapName" data-id="27" onclick="map('Mounthill', 27)" href="#Mounthill">蒙特山
+									(0/9)</a></li>
+							<li><a class="mapName" data-id="28" onclick="map('GoldusPharmaceuticals', 28)"
+									href="#GoldusPharmaceuticals">格尔多斯制药工厂 (0/2)</a></li>
+							<li><a class="mapName" data-id="29" onclick="map('NeuronDNAResearchCenter', 29)"
+									href="#NeuronDNAResearchCenter">基因科研中心 (0/2)</a></li>
+							<li><a class="mapName" data-id="30" onclick="map('ShadowGate', 30)" href="#ShadowGate">阴影之门
+									(0/2)</a></li>
+							<li><a class="mapName" data-id="31" onclick="map('AndreaBarony', 31)"
+									href="#AndreaBarony">安德雷亚家族领地 (0/3)</a></li>
+							<li><a class="mapName" data-id="32" onclick="map('TrinianCrossing', 32)"
+									href="#TrinianCrossing">特里尼安街 (0/11)</a></li>
+							<li><a class="mapName" data-id="33" onclick="map('EllinGrove', 33)" href="#EllinGrove">艾琳森林
+									(0/2)</a></li>
+							<li><a class="mapName" data-id="34" onclick="map('EllbosHollow', 34)"
+									href="#Ellbo'sHollow">Ellbo's Hollow (0/3)</a></li>
+							<li><a class="mapName" data-id="35" onclick="map('MajoreLakePark', 35)"
+									href="#MajoreLakePark">玛乔雷公园 (0/5)</a></li>
+							<li><a class="mapName" data-id="36" onclick="map('TorharaSpring', 36)"
+									href="#TorharaSpring">托尔哈泉水 (0/2)</a></li>
+							<li><a class="mapName" data-id="37" onclick="map('TrinketWoods', 37)"
+									href="#TrinketWoods">玩具森林 (0/7)</a></li>
+							<li><a class="mapName" data-id="38" onclick="map('HotottotRiver', 38)"
+									href="#HotottotRiver">灼热河畔 (0/3)</a></li>
+							<li><a class="mapName" data-id="39" onclick="map('LavaEyeNest', 39)"
+									href="#LavaEyeNest">熔岩独眼怪巢穴 (0/2)</a></li>
+							<li><a class="mapName" data-id="40" onclick="map('PrismFalls', 40)" href="#PrismFalls">冰冻瀑布
+									(0/2)</a></li>
+							<li><a class="mapName" data-id="41" onclick="map('RazedForest', 41)"
+									href="#RazedForest">干旱伐木场 (0/3)</a></li>
+							<li><a class="mapName" data-id="42" onclick="map('MistyTemple', 42)"
+									href="#MistyTemple">迷雾寺院 (0/3)</a></li>
+							<li><a class="mapName" data-id="43" onclick="map('StoneQuarry', 43)"
+									href="#StoneQuarry">风柱采石场 (0/3)</a></li>
+							<li><a class="mapName" data-id="44" onclick="map('StonehillDigSite', 44)"
+									href="#StonehillDigSite">石柱岭挖掘场 (0/3)</a></li>
+							<li><a class="mapName" data-id="45" onclick="map('ParuvanPlateau', 45)"
+									href="#ParuvanPlateau">佩鲁高原 (0/3)</a></li>
+							<li><a class="mapName" data-id="46" onclick="map('BonebridgeWorksite', 46)"
+									href="#BonebridgeWorksite">骨桥工地 (0/3)</a></li>
+							<li><a class="mapName" data-id="47" onclick="map('WindsongRavine', 47)"
+									href="#WindsongRavine">风声峡谷 (0/3)</a></li>
+							<li><a class="mapName" data-id="48" onclick="map('BaumTree', 48)" href="#BaumTree">巴翁树
+									(0/2)</a></li>
+							<li><a class="mapName" data-id="49" onclick="map('WestWatchtower', 49)"
+									href="#WestWatchtower">西部监视塔 (0/3)</a></li>
+							<li><a class="mapName" data-id="50" onclick="map('ForgottenKeep', 50)"
+									href="#ForgottenKeep">遗忘城堡 (0/5)</a></li>
+							<li><a class="mapName" data-id="51" onclick="map('MoltenHourglass', 51)"
+									href="#MoltenHourglass">熔化沙漏 (0/2)</a></li>
+							<li><a class="mapName" data-id="52" onclick="map('AntTunnelEntrance', 52)"
+									href="#AntTunnelEntrance">蚂蚁洞入口 (0/2)</a></li>
+							<li><a class="mapName" data-id="53" onclick="map('WestWindHill', 53)"
+									href="#WestWindHill">西部山丘 (0/7)</a></li>
+							<li><a class="mapName" data-id="54" onclick="map('PicchuPicchuGardens', 54)"
+									href="#PicchuPicchuGardens">空中庭院 (0/5)</a></li>
+							<li><a class="mapName" data-id="55" onclick="map('HenesysDocks', 55)"
+									href="#HenesysDocks">射手村渡口 (0/4)</a></li>
+							<li><a class="mapName" data-id="56" onclick="map('PrecipiceFortress', 56)"
+									href="#PrecipiceFortress">陡峭绝壁要塞 (0/3)</a></li>
+							<li><a class="mapName" data-id="57" onclick="map('Sweetskirts', 57)"
+									href="#Sweetskirts">糖果山丘 (0/3)</a></li>
+							<li><a class="mapName" data-id="58" onclick="map('ForestofLostMemories', 58)"
+									href="#ForestofLostMemories">失忆森林 (0/2)</a></li>
+							<li><a class="mapName" data-id="59" onclick="map('AntTunnelPlaza', 59)"
+									href="#AntTunnelPlaza">蚂蚁洞广场 (0/2)</a></li>
+							<!-- <li><a class="mapName" data-id="60" onclick="map('GreenoCrossing', 60)" href="#GreenoCrossing"> (0/3)</a></li> -->
+							<li><a class="mapName" data-id="61" onclick="map('SweetToothValley', 61)"
+									href="#SweetToothValley">甜蜜山谷 (0/3)</a></li>
+							<li><a class="mapName" data-id="62" onclick="map('VerdantHeights', 62)"
+									href="#VerdantHeights">格里诺岔道 (0/3)</a></li>
+							<li><a class="mapName" data-id="63" onclick="map('CoronaLake', 63)" href="#CoronaLake">日冕湖
+									(0/3)</a></li>
+							<li><a class="mapName" data-id="64" onclick="map('LavaSprings', 64)"
+									href="#LavaSprings">熔岩温泉 (0/4)</a></li>
+							<li><a class="mapName" data-id="65" onclick="map('GreatEllinTrees', 65)"
+									href="#GreatEllinTrees">通天艾琳树 (0/8)</a></li>
+							<li><a class="mapName" data-id="66" onclick="map('MoonglowForest', 66)"
+									href="#MoonglowForest">月光森林 (0/9)</a></li>
+							<!-- <li><a class="mapName" data-id="67" onclick="map('ForestofLife', 67)" href="#ForestofLife">生命森林 (0/3)</a></li> -->
+							<li><a class="mapName" data-id="68" onclick="map('Godspring', 68)" href="#Godspring">神之泉
+									(0/3)</a></li>
+							<li><a class="mapName" data-id="69" onclick="map('SandDunes', 69)" href="#SandDunes">粗砂山丘
+									(0/5)</a></li>
+							<li><a class="mapName" data-id="70" onclick="map('BesherelMagicLibrary', 70)"
+									href="#BesherelMagicLibrary">密林图书馆 (0/3)</a></li>
+							<li><a class="mapName" data-id="71" onclick="map('BreezyHills', 71)" href="#BreezyHills">微风岭
+									(0/3)</a></li>
+							<li><a class="mapName" data-id="72" onclick="map('ElluaForestPath', 72)"
+									href="#ElluaForestPath">露亚森林 (0/3)</a></li>
+							<li><a class="mapName" data-id="73" onclick="map('EllinRuins', 73)" href="#EllinRuins">艾琳遗迹
+									(0/6)</a></li>
+							<li><a class="mapName" data-id="74" onclick="map('GreeniaFalls', 74)"
+									href="#GreeniaFalls">格里尼亚瀑布 (0/2)</a></li>
+							<li><a class="mapName" data-id="75" onclick="map('ElluaRiverside', 75)"
+									href="#ElluaRiverside">露亚河畔 (0/3)</a></li>
+							<li><a class="mapName" data-id="76" onclick="map('FungeeburgStump', 76)"
+									href="#FungeeburgStump">蘑菇丛林 (0/7)</a></li>
+							<li><a class="mapName" data-id="77" onclick="map('MirrorCastle', 77)"
+									href="#MirrorCastle">重生城堡 (0/3)</a></li>
+							<li><a class="mapName" data-id="78" onclick="map('TwilightMoonCastle', 78)"
+									href="#TwilightMoonCastle">紫门城堡 (0/3)</a></li>
+							<li><a class="mapName" data-id="79" onclick="map('SereneDocks', 79)"
+									href="#SereneDocks">寂静渡口 (0/4)</a></li>
+							<li><a class="mapName" data-id="80" onclick="map('CausticGarden', 80)"
+									href="#CausticGarden">熔化庭院 (0/3)</a></li>
+							<li><a class="mapName" data-id="81" onclick="map('RainbowMountain', 81)"
+									href="#RainbowMountain">彩虹山 (0/4)</a></li>
+							<li><a class="mapName" data-id="82" onclick="map('Ellosylva', 82)" href="#Ellosylva">热带雨林
+									(0/9)</a></li>
+							<li><a class="mapName" data-id="83" onclick="map('LudibriumCrevasse', 83)"
+									href="#LudibriumCrevasse">玩具城缝隙 (0/2)</a></li>
+							<li><a class="mapName" data-id="84" onclick="map('TidepoolCliffs', 84)"
+									href="#TidepoolCliffs">漩涡悬崖 (0/6)</a></li>
+							<li><a class="mapName" data-id="85" onclick="map('CheliskaBay', 85)"
+									href="#CheliskaBay">切利斯卡海湾 (0/4)</a></li>
+							<li><a class="mapName" data-id="86" onclick="map('OvertopBeanstalk', 86)"
+									href="#OvertopBeanstalk">豆树旷野 (0/2)</a></li>
+							<li><a class="mapName" data-id="87" onclick="map('BarbosaBeach', 87)"
+									href="#BarbosaBeach">巴尔萨海岸 (0/8)</a></li>
+							<li><a class="mapName" data-id="88" onclick="map('ClockTowerSquare', 88)"
+									href="#ClockTowerSquare">钟楼广场 (0/2)</a></li>
+							<li><a class="mapName" data-id="89" onclick="map('RoseCastle', 89)" href="#RoseCastle">玫瑰城
+									(0/3)</a></li>
+							<li><a class="mapName" data-id="90" onclick="map('TortugaSeasideCliff', 90)"
+									href="#TortugaSeasideCliff">月光海岸 (0/3)</a></li>
+							<li><a class="mapName" data-id="91" onclick="map('Slumberland', 91)"
+									href="#Slumberland">梦幻乐园 (0/3)</a></li>
+							<li><a class="mapName" data-id="92" onclick="map('MurosMediaPark', 92)"
+									href="#MurosMediaPark">假日影城 (0/5)</a></li>
+							<li><a class="mapName" data-id="93" onclick="map('RedWall', 93)" href="#RedWall">红色警戒区
+									(0/4)</a></li>
+							<li><a class="mapName" data-id="94" onclick="map('WhistlerCliffs', 94)"
+									href="#WhistlerCliffs">红哨悬崖 (0/8)</a></li>
+							<li><a class="mapName" data-id="95" onclick="map('PigmingClanAltar', 95)"
+									href="#PigmingClanAltar">鸣戈部族祭坛 (0/3)</a></li>
+							<li><a class="mapName" data-id="96" onclick="map('WolfclawCanyon', 96)"
+									href="#WolfclawCanyon">狼爪峡谷 (0/7)</a></li>
+							<li><a class="mapName" data-id="97" onclick="map('LudiStation', 97)"
+									href="#LudiStation">玩具城车站 (0/4)</a></li>
+							<li><a class="mapName" data-id="98" onclick="map('HighcliffTemple', 98)"
+									href="#HighcliffTemple">遗忘神殿 (0/7)</a></li>
+							<li><a class="mapName" data-id="99" onclick="map('KerningTechnoValley', 99)"
+									href="#KerningTechnoValley">黑金市科技谷 (0/6)</a></li>
+							<li><a class="mapName" data-id="100" onclick="map('KolopuaCrag', 100)"
+									href="#KolopuaCrag">峭壁庭院 (0/11)</a></li>
+							<li><a class="mapName" data-id="101" onclick="map('LudiFantasia', 101)"
+									href="#LudiFantasia">玩具幻想曲 (0/3)</a></li>
+							<li><a class="mapName" data-id="102" onclick="map('MacaroonAcres', 102)"
+									href="#MacaroonAcres">马卡龙小镇 (0/5)</a></li>
+							<li><a class="mapName" data-id="103" onclick="map('RaptorDivePass', 103)"
+									href="#RaptorDivePass">雄鹰岭 (0/3)</a></li>
+							<li><a class="mapName" data-id="104" onclick="map('ChronoffTrainStation', 104)"
+									href="#ChronoffTrainStation">克洛诺夫火车站 (0/6)</a></li>
+							<li><a class="mapName" data-id="105" onclick="map('FrostbunnyPark', 105)"
+									href="#FrostbunnyPark">兔女郎白雪公园 (0/5)</a></li>
+							<li><a class="mapName" data-id="106" onclick="map('FracturedCanyon', 106)"
+									href="#FracturedCanyon">伤痕峡谷 (0/6)</a></li>
+							<li><a class="mapName" data-id="107" onclick="map('MagmaResearchStation', 107)"
+									href="#MagmaResearchStation">熔岩能研中心 (0/6)</a></li>
+							<li><a class="mapName" data-id="108" onclick="map('SkyreachPass', 108)"
+									href="#SkyreachPass">天路 (0/6)</a></li>
+							<li><a class="mapName" data-id="109" onclick="map('BerrysweetCastle', 109)"
+									href="#BerrysweetCastle">粉心甜蜜城堡 (0/5)</a></li>
+							<li><a class="mapName" data-id="110" onclick="map('HarrotHill', 110)"
+									href="#HarrotHill">胡萝卜兔子乐园 (0/3)</a></li>
+							<li><a class="mapName" data-id="111" onclick="map('LudiArcade', 111)"
+									href="#LudiArcade">玩具城游戏厅 (0/4)</a></li>
+							<li><a class="mapName" data-id="112" onclick="map('CellimentalTestBunker', 112)"
+									href="#CellimentalTestBunker">实验基地 (0/4)</a></li>
+							<li><a class="mapName" data-id="113" onclick="map('KarnifsFang', 113)"
+									href="#KarnifsFang">魔狼尖牙 (0/3)</a></li>
+							<li><a class="mapName" data-id="114" onclick="map('MSLElectronicsInstitute', 114)"
+									href="#MSLElectronicsInstitute">MSI机械研究所 (0/7)</a></li>
+							<li><a class="mapName" data-id="115" onclick="map('MSLFactory', 115)"
+									href="#MSLFactory">MSI工厂 (0/4)</a></li>
+							<li><a class="mapName" data-id="116" onclick="map('AntTunnelPassage', 116)"
+									href="#AntTunnelPassage">蚂蚁洞通道 (0/5)</a></li>
+							<li><a class="mapName" data-id="117" onclick="map('FrostpeakMountain', 117)"
+									href="#FrostpeakMountain">雪花山峰 (0/5)</a></li>
+							<li><a class="mapName" data-id="118" onclick="map('KernelEnergyResearch', 118)"
+									href="#KernelEnergyResearch">科奈尔能量研究所 (0/5)</a></li>
+							<li><a class="mapName" data-id="119" onclick="map('FrostemberVoid', 119)"
+									href="#FrostemberVoid">冰冻熔岩洞 (0/5)</a></li>
+							<li><a class="mapName" data-id="120" onclick="map('SnowscarfHaven', 120)"
+									href="#SnowscarfHaven">白色圣诞节 (0/5)</a></li>
+							<li><a class="mapName" data-id="121" onclick="map('MSLRobotDevCenter', 121)"
+									href="#MSLRobotDevCenter">MSI研发中心 (0/2)</a></li>
+							<li><a class="mapName" data-id="122" onclick="map('LavalunaCave', 122)"
+									href="#LavalunaCave">熔岩洞穴 (0/3)</a></li>
+							<li><a class="mapName" data-id="123" onclick="map('LuditionCarnival', 123)"
+									href="#LuditionCarnival">玩具嘉年华 (0/3)</a></li>
+							<li><a class="mapName" data-id="124" onclick="map('CaveofEternity', 124)"
+									href="#CaveofEternity">永恒洞穴 (0/10)</a></li>
+							<li><a class="mapName" data-id="125" onclick="map('LavaCrest', 125)" href="#LavaCrest">熔岩山
+									(0/6)</a></li>
+							<li><a class="mapName" data-id="126" onclick="map('Steamerbrook', 126)"
+									href="#Steamerbrook">幻城 (0/5)</a></li>
+							<li><a class="mapName" data-id="127" onclick="map('Frozencrest', 127)"
+									href="#Frozencrest">冰封王冠 (0/3)</a></li>
+							<li><a class="mapName" data-id="128" onclick="map('WaterSupplyCenter', 128)"
+									href="#WaterSupplyCenter">供水中心 (0/3)</a></li>
+							<li><a class="mapName" data-id="129" onclick="map('CrystalfrostWall', 129)"
+									href="#CrystalfrostWall">水晶冰壁 (0/3)</a></li>
+							<li><a class="mapName" data-id="130" onclick="map('MagmaGorge', 130)"
+									href="#MagmaGorge">岩浆峡谷 (0/6)</a></li>
+							<!-- <li><a class="mapName" data-id="131" onclick="map('WailingMine', 131)" href="#WailingMine">哀嚎矿山 (0/4)</a></li> -->
+							<li><a class="mapName" data-id="132" onclick="map('IglooHill', 132)" href="#IglooHill">格鲁斯山
+									(0/6)</a></li>
+							<!-- <li><a class="mapName" data-id="133" onclick="map('MagmaTrail', 133)" href="#MagmaTrail">燃烧熔岩路 (0/2)</a></li> -->
+							<li><a class="mapName" data-id="134" onclick="map('PhantomaCyborgCenter', 134)"
+									href="#PhantomaCyborgCenter">潘托亚机器人中心 (0/5)</a></li>
+							<li><a class="mapName" data-id="135" onclick="map('KabriumBasin', 135)"
+									href="#KabriumBasin">卡布利安盆地 (0/2)</a></li>
+							<li><a class="mapName" data-id="136" onclick="map('ChekartaChemicals', 136)"
+									href="#ChekartaChemicals">切卡斯塔化工厂 (0/2)</a></li>
+							<li><a class="mapName" data-id="137" onclick="map('BlackoutExpanse', 137)"
+									href="#BlackoutExpanse">黑暗外域 (0/4)</a></li>
+							<li><a class="mapName" data-id="138" onclick="map('OccupiedFellowstone', 138)"
+									href="#OccupiedFellowstone">洛菲尔占领区 (0/2)</a></li>
+							<li><a class="mapName" data-id="139" onclick="map('DarkCellVirusCenter', 139)"
+									href="#DarkCellVirusCenter">黑格病毒中心 (0/2)</a></li>
+							<li><a class="mapName" data-id="140" onclick="map('Picardiv', 140)" href="#Picardiv">熔岩禁区
+									(0/2)</a></li>
+							<li><a class="mapName" data-id="141" onclick="map('TorravaRiver', 141)"
+									href="#TorravaRiver">红河(PVP区域) (0/3)</a></li>
+							<li><a class="mapName" data-id="142" onclick="map('VanishedRuins', 142)"
+									href="#VanishedRuins">消失的遗迹(PVP区域) (0/6)</a></li>
+							<li><a class="mapName" data-id="143" onclick="map('SavageCrossroads', 143)"
+									href="#SavageCrossroads">黑暗岔路(PVP区域) (0/2)</a></li>
+							<li><a class="mapName" data-id="144" onclick="map('DebloonRanch', 144)"
+									href="#DebloonRanch">德布伦牧场 (0/5)</a></li>
+							<li><a class="mapName" data-id="145" onclick="map('Stormville', 145)"
+									href="#Stormville">暴风山谷 (0/4)</a></li>
+							<li><a class="mapName" data-id="146" onclick="map('VictoriasRest', 146)"
+									href="#VictoriasRest">金银岛灵魂船(PVP区域) (0/3)</a></li>
+							<li><a class="mapName" data-id="147" onclick="map('NorthTyrannyRoad', 147)"
+									href="#NorthTyrannyRoad">黑暗大道北部(PVP区域) (0/7)</a></li>
+							<li><a class="mapName" data-id="148" onclick="map('SouthTyrannyRoad', 148)"
+									href="#SouthTyrannyRoad">黑暗大道南部(PVP区域) (0/6)</a></li>
+							<li><a class="mapName" data-id="149" onclick="map('Wallowville', 149)"
+									href="#Wallowville">哀嚎村庄(PVP区域) (0/5)</a></li>
+							<li><a class="mapName" data-id="150" onclick="map('BittersValley', 150)"
+									href="#BittersValley">苦难山谷(PVP区域) (0/5)</a></li>
+							<li><a class="mapName" data-id="151" onclick="map('PiercewindHills', 151)"
+									href="#PiercewindHills">刀风岭 (0/3)</a></li>
+							<li><a class="mapName" data-id="152" onclick="map('StormyHills', 152)"
+									href="#StormyHills">暴风山丘(PVP区域) (0/5)</a></li>
+							<li><a class="mapName" data-id="153" onclick="map('Demonspring', 153)"
+									href="#Demonspring">恶魔之泪(PVP区域) (0/3)</a></li>
+							<li><a class="mapName" data-id="154" onclick="map('BlackForest', 154)"
+									href="#BlackForest">黑森林(PVP区域) (0/2)</a></li>
+							<li><a class="mapName" data-id="155" onclick="map('Calamitysnare', 155)"
+									href="#Calamitysnare">灾难之地(PVP区域) (0/3)</a></li>
+							<li><a class="mapName" data-id="156" onclick="map('MoldyHollow', 156)"
+									href="#MoldyHollow">霉树洞穴(PVP区域) (0/5)</a></li>
+							<li><a class="mapName" data-id="157" onclick="map('OutlawsOverlook', 157)"
+									href="#OutlawsOverlook">狂徒山丘(PVP区域) (0/4)</a></li>
+							<li><a class="mapName" data-id="158" onclick="map('BlazingForest', 158)"
+									href="#BlazingForest">燃烧伐木场(PVP区域) (0/5)</a></li>
+							<li><a class="mapName" data-id="159" onclick="map('InfernalTree', 159)"
+									href="#InfernalTree">地狱树 (0/4)</a></li>
+							<li><a class="mapName" data-id="160" onclick="map('CocoIsland', 160)"
+									href="#CocoIsland">水族乐园 (0/3)</a></li>
+							<li><a class="mapName" data-id="161" onclick="map('MeltaDam', 161)"
+									href="#MeltaDam">梅尔塔大坝(PVP区域) (0/5)</a></li>
+							<li><a class="mapName" data-id="162" onclick="map('ObsidianMount', 162)"
+									href="#ObsidianMount">黑岩山(PVP区域) (0/3)</a></li>
+							<li><a class="mapName" data-id="163" onclick="map('CozalitaGraveyard', 163)"
+									href="#CozalitaGraveyard">科扎利塔(PVP区域) (0/3)</a></li>
+							<li><a class="mapName" data-id="164" onclick="map('GloomyForest', 164)"
+									href="#GloomyForest">阴暗森林(PVP区域) (0/6)</a></li>
+							<li><a class="mapName" data-id="165" onclick="map('SealedForest', 165)"
+									href="#SealedForest">封印森林(PVP区域) (0/6)</a></li>
+							<li><a class="mapName" data-id="166" onclick="map('RizabIsland', 166)"
+									href="#RizabIsland">钢铁岩石岛 (0/4)</a></li>
+							<li><a class="mapName" data-id="167" onclick="map('TiaresDesert', 167)"
+									href="#TiaresDesert">迪亚雷斯沙漠 (0/4)</a></li>
+							<li><a class="mapName" data-id="168" onclick="map('LudariArena', 168)"
+									href="#LudariArena">鲁德利竞技场 (0/4)</a></li>
+							<li><a class="mapName" data-id="169" onclick="map('TuningMotorsShowroom', 169)"
+									href="#TuningMotorsShowroom">改装汽车公司展示场 (0/4)</a></li>
+							<li><a class="mapName" data-id="170" onclick="map('LudariStation', 170)"
+									href="#LudariStation">鲁德利列车站 (0/4)</a></li>
+							<li><a class="mapName" data-id="171" onclick="map('ParadiseCircuit', 171)"
+									href="#ParadiseCircuit">天堂赛车场 (0/5)</a></li>
+							<li><a class="mapName" data-id="172" onclick="map('LavenderIsland', 172)"
+									href="#LavenderIsland">薰衣草之岛 (0/4)</a></li>
+							<li><a class="mapName" data-id="173" onclick="map('WestAutoBridge', 173)"
+									href="#WestAutoBridge">卡尔桥西 (0/3)</a></li>
+							<li><a class="mapName" data-id="174" onclick="map('EastAutoBridge', 174)"
+									href="#EastAutoBridge">卡尔桥东 (0/3)</a></li>
+							<li><a class="mapName" data-id="175" onclick="map('RainbowValley', 175)"
+									href="#RainbowValley">彩虹谷 (0/6)</a></li>
+							<li><a class="mapName" data-id="176" onclick="map('RedsandHills', 176)"
+									href="#RedsandHills">红色砂石 (0/5)</a></li>
+							<li><a class="mapName" data-id="177" onclick="map('MoonlightDesert', 177)"
+									href="#MoonlightDesert">月光沙漠 (0/5)</a></li>
+							<li><a class="mapName" data-id="178" onclick="map('MoonlightGarden', 178)"
+									href="#MoonlightGarden">月光庭院 (0/5)</a></li>
+							<li><a class="mapName" data-id="179" onclick="map('SandstarRuins', 179)"
+									href="#SandstarRuins">星沙遗迹 (0/5)</a></li>
+							<li><a class="mapName" data-id="180" onclick="map('NazkarPyramid', 180)"
+									href="#NazkarPyramid">纳兹卡尔入口 (0/5)</a></li>
+							<li><a class="mapName" data-id="181" onclick="map('NazkarPassageways', 181)"
+									href="#NazkarPassageways">纳兹卡尔通道 (0/4)</a></li>
+							<li><a class="mapName" data-id="182" onclick="map('NazkarCentralChamber', 182)"
+									href="#NazkarCentralChamber">纳兹卡尔中央 (0/4)</a></li>
+							<li><a class="mapName" data-id="183" onclick="map('NazkarAltar', 183)"
+									href="#NazkarAltar">纳兹卡尔祭坛 (0/4)</a></li>
+							<li><a class="mapName" data-id="184" onclick="map('NazkarMainHall', 184)"
+									href="#NazkarMainHall">纳兹卡尔大厅 (0/3)</a></li>
+							<li><a class="mapName" data-id="185" onclick="map('LudariMall', 185)"
+									href="#LudariMall">萌萌购物中心 (0/5)</a></li>
+							<li><a class="mapName" data-id="186" onclick="map('TheDeckSkatepark', 186)"
+									href="#TheDeckSkatepark">砰砰公园 (0/3)</a></li>
+							<li><a class="mapName" data-id="187" onclick="map('Aquatopia', 187)"
+									href="#Aquatopia">丽迪斯水上世界 (0/4)</a></li>
+							<li><a class="mapName" data-id="188" onclick="map('ExpeditionBase', 188)"
+									href="#ExpeditionBase">斯科佩尔基地 (0/3)</a></li>
+							<li><a class="mapName" data-id="189" onclick="map('AuroraLaboratory', 189)"
+									href="#AuroraLaboratory">极光研究所 (0/3)</a></li>
+							<li><a class="mapName" data-id="190" onclick="map('LuluVillage', 190)"
+									href="#LuluVillage">露露村 (0/3)</a></li>
+							<li><a class="mapName" data-id="191" onclick="map('ForsakenFields', 191)"
+									href="#ForsakenFields">孤寂原野 (0/2)</a></li>
+							<li><a class="mapName" data-id="192" onclick="map('LionsGate', 192)"
+									href="#Lion'sGate">Lion's Gate (0/4)</a></li>
+							<li><a class="mapName" data-id="193" onclick="map('BarrenBarony', 193)"
+									href="#BarrenBarony">诅咒领地 (0/4)</a></li>
+							<li><a class="mapName" data-id="194" onclick="map('Beachway666', 194)"
+									href="#Beachway666">黄金海岸“666” (0/4)</a></li>
+							<li><a class="mapName" data-id="195" onclick="map('BleakshadowCrossing', 195)"
+									href="#BleakshadowCrossing">黑暗立交路 (0/3)</a></li>
+							<li><a class="mapName" data-id="196" onclick="map('BleakshadowWasteCenter', 196)"
+									href="#BleakshadowWasteCenter">黑暗废物处理场 (0/4)</a></li>
+							<li><a class="mapName" data-id="197" onclick="map('BoilingPeaks', 197)"
+									href="#BoilingPeaks">烧焦的彩虹山 (0/4)</a></li>
+							<li><a class="mapName" data-id="198" onclick="map('BonebridgeRuins', 198)"
+									href="#BonebridgeRuins">骨桥废墟 (0/3)</a></li>
+							<li><a class="mapName" data-id="199" onclick="map('CorruptedSquare', 199)"
+									href="#CorruptedSquare">黑暗广场 (0/4)</a></li>
+							<li><a class="mapName" data-id="200" onclick="map('CrystalValeRuins', 200)"
+									href="#CrystalValeRuins">水晶矿山废墟 (0/3)</a></li>
+							<li><a class="mapName" data-id="201" onclick="map('DarkHeart', 201)" href="#DarkHeart">腐烂心脏
+									(0/3)</a></li>
+							<li><a class="mapName" data-id="202" onclick="map('DarkstoneQuarry', 202)"
+									href="#DarkstoneQuarry">黑柱采石场 (0/4)</a></li>
+							<li><a class="mapName" data-id="203" onclick="map('Deadsville', 203)"
+									href="#Deadsville">黑暗山谷 (0/5)</a></li>
+							<li><a class="mapName" data-id="204" onclick="map('GrimThoroughfare', 204)"
+									href="#GrimThoroughfare">黑暗特里尼安街 (0/7)</a></li>
+							<li><a class="mapName" data-id="205" onclick="map('InfernalHourglass', 205)"
+									href="#InfernalHourglass">诅咒沙漏 (0/4)</a></li>
+							<li><a class="mapName" data-id="206" onclick="map('LavarushValley', 206)"
+									href="#LavarushValley">沸腾熔岩峡谷 (0/4)</a></li>
+							<li><a class="mapName" data-id="207" onclick="map('LithRuins', 207)" href="#LithRuins">黑暗明珠港
+									(0/3)</a></li>
+							<li><a class="mapName" data-id="208" onclick="map('MajoreBog', 208)" href="#MajoreBog">玛乔雷沼泽
+									(0/5)</a></li>
+							<li><a class="mapName" data-id="209" onclick="map('PhantasmFalls', 209)"
+									href="#PhantasmFalls">灵魂瀑布 (0/3)</a></li>
+							<li><a class="mapName" data-id="210" onclick="map('RavagedHenesys', 210)"
+									href="#RavagedHenesys">黑暗射手村 (0/3)</a></li>
+							<li><a class="mapName" data-id="211" onclick="map('ShadowFactory', 211)"
+									href="#ShadowFactory">黑暗奴役场 (0/5)</a></li>
+							<li><a class="mapName" data-id="212" onclick="map('ShadowFortress', 212)"
+									href="#ShadowFortress">暗黑城堡 (0/4)</a></li>
+							<li><a class="mapName" data-id="213" onclick="map('ShattofyerRiver', 213)"
+									href="#ShattofyerRiver">火狱河畔 (0/3)</a></li>
+							<li><a class="mapName" data-id="214" onclick="map('SilentStreets', 214)"
+									href="#SilentStreets">沉寂大道 (0/6)</a></li>
+							<li><a class="mapName" data-id="215" onclick="map('SnagwoodForest', 215)"
+									href="#SnagwoodForest">枯树森林 (0/4)</a></li>
+							<li><a class="mapName" data-id="216" onclick="map('SpecterWoodsTrail', 216)"
+									href="#SpecterWoodsTrail">灵魂森林小径 (0/4)</a></li>
+							<li><a class="mapName" data-id="217" onclick="map('StormForge', 217)"
+									href="#StormForge">暴风洛伯斯坦 (0/2)</a></li>
+							<li><a class="mapName" data-id="218" onclick="map('TumultuousDocks', 218)"
+									href="#TumultuousDocks">地狱渡口 (0/4)</a></li>
+							<li><a class="mapName" data-id="219" onclick="map('TurkasWatchtower', 219)"
+									href="#Turka'sWatchtower">图尔卡监视塔 (0/3)</a></li>
+							<li><a class="mapName" data-id="220" onclick="map('TyrranyRoadPlaza', 220)"
+									href="#TyrranyRoadPlaza">黑暗大道入口广场 (0/5)</a></li>
+							<li><a class="mapName" data-id="221" onclick="map('WailingCragFortress', 221)"
+									href="#WailingCragFortress">哀嚎绝壁要塞 (0/4)</a></li>
+						</ul>
 					</div>
-					
-				  </div>
+
+					<div class="slidecontainer">
+						<input type="range" min="1" max="10" value="10" class="slider" id="myRange">
+					</div>
+
+					<div class="right" id="right">
+						<img id="map" onclick="pos(event)" width="828" height="791" draggable="false">
+
+						<div class="loader">
+							<div class="loader_2"></div>
+							<div class="loader_3"></div>
+						</div>
+
+					</div>
 				</div>
-				
+
 			</div>
-			
+
 			<div id="menu_list">
 				<ul class="list-group">
-				  <li class="list-group-item drop_image">Image</li>
-				  <li class="list-group-item drop_video">Video</li>
-				  <li class="list-group-item drop_mark">Mark/Unmark</li>
+					<li class="list-group-item drop_image">Image</li>
+					<li class="list-group-item drop_video">Video</li>
+					<li class="list-group-item drop_mark">Mark/Unmark</li>
 				</ul>
 			</div>
-			
+
 		</div>
-		
+
 		<!-- EXPLORE END -->
-		
+
 		<!-- CALCULATOR START -->
-		
+
 		<div id="skills_container">
-			
+
 			<div class="calcBox">
-					
+
 				<div id="window">
-				
+
 					<div id="skill_icon"></div>
 					<div id="skill_title">Skills</div>
-				
+
 					<div id="rank2_bg"></div>
-				
+
 					<div id="rank_bar">
 						<div onclick="changeRank(1)" class="rank_bar_icon">
 							<div id="rbi1" class="rank_bar_img selected"></div>
@@ -1223,14 +1461,14 @@
 							<div id="rbi2" class="rank_bar_img"></div>
 							<p>Rank 2 Skills</p>
 						</div>
-						
+
 						<div onclick="changeRank(3)" class="rank_bar_icon">
 							<div id="rbi3" class="rank_bar_img"></div>
 							<p>Lapenshard</p>
 						</div>
-						
+
 					</div>
-				
+
 					<div id="levels_bar">
 						<p id="levels_bar_1" class="levels_bar_text">Level 1</p>
 						<p id="levels_bar_2" class="levels_bar_text">Level 10</p>
@@ -1239,145 +1477,171 @@
 						<p id="levels_bar_5" class="levels_bar_text">Level 40</p>
 						<p id="levels_bar_6" class="levels_bar_text">Level 50</p>
 					</div>
-						
+
 					<div id="lines"></div>
-						
+
 					<div id="drag_bar"></div>
-						
-					<div id="jobName"><p>Knight</p></div>
-					
+
+					<div id="jobName">
+						<p>Knight</p>
+					</div>
+
 					<!-- Default dropdown button -->
 					<div id="jobDrop2" class="btn-group dropdown">
-						<button type="button" class="btn dropdown-toggle"
-						data-toggle="dropdown" data-offset="2,0" aria-haspopup="true" aria-label="dropdown" aria-expanded="false"></button>
+						<button type="button" class="btn dropdown-toggle" data-toggle="dropdown" data-offset="2,0"
+							aria-haspopup="true" aria-label="dropdown" aria-expanded="false"></button>
 						<div class="dropdown-menu">
 							<a class="dropdown-item" onclick="changeJob(knight_skills, 'Knight')" href="#">Knight</a>
-							<a class="dropdown-item" onclick="changeJob(berserker_skills, 'Berserker')" href="#">Berserker</a>
+							<a class="dropdown-item" onclick="changeJob(berserker_skills, 'Berserker')"
+								href="#">Berserker</a>
 							<a class="dropdown-item" onclick="changeJob(wizard_skills, 'Wizard')" href="#">Wizard</a>
 							<a class="dropdown-item" onclick="changeJob(priest_skills, 'Priest')" href="#">Priest</a>
 							<a class="dropdown-item" onclick="changeJob(archer_skills, 'Archer')" href="#">Archer</a>
-							<a class="dropdown-item" onclick="changeJob(heavy_gunner_skills, 'Heavy Gunner')" href="#">Heavy Gunner</a>
+							<a class="dropdown-item" onclick="changeJob(heavy_gunner_skills, 'Heavy Gunner')"
+								href="#">Heavy Gunner</a>
 							<a class="dropdown-item" onclick="changeJob(thief_skills, 'Thief')" href="#">Thief</a>
-							<a class="dropdown-item" onclick="changeJob(assassin_skills, 'Assassin')" href="#">Assassin</a>
-							<a class="dropdown-item" onclick="changeJob(runeblade_skills, 'Runeblade')" href="#">Runeblade</a>
-							<a class="dropdown-item" onclick="changeJob(soul_binder_skills, 'Soul Binder')" href="#">Soul Binder</a>
+							<a class="dropdown-item" onclick="changeJob(assassin_skills, 'Assassin')"
+								href="#">Assassin</a>
+							<a class="dropdown-item" onclick="changeJob(runeblade_skills, 'Runeblade')"
+								href="#">Runeblade</a>
+							<a class="dropdown-item" onclick="changeJob(soul_binder_skills, 'Soul Binder')"
+								href="#">Soul Binder</a>
 							<a class="dropdown-item" onclick="changeJob(striker_skills, 'Striker')" href="#">Striker</a>
 						</div>
 					</div>
-					
+
 					<div class="row" id="skills_right">
-						
+
 					</div>
-						
-					<div id="skill_points"><p>Remaining Skill Points: </p><p id="skillPointNumber">0</p></div>
-					
+
+					<div id="skill_points">
+						<p>Remaining Skill Points: </p>
+						<p id="skillPointNumber">0</p>
+					</div>
+
 					<div id="resetSkills" onclick="resetSkills()"></div>
 
 					<form id="saveSkillBuild">
 						<label id="saveLabel" for="buildNameInput" onclick="showInputField()"></label>
 						<input class="form-control" id="buildNameInput" placeholder="Save As" type="text" maxlength="32"
-								data-toggle="tooltip" data-placement="left" title="Enter to Save. Esc to Cancel."/>
-						<input class="d-none" type="submit"/>
+							data-toggle="tooltip" data-placement="left" title="Enter to Save. Esc to Cancel." />
+						<input class="d-none" type="submit" />
 					</form>
 
 					<div id="loadSkillBuild" class="btn-group dropup">
 						<button type="button" class="btn dropdown-toggle" id="loadBuildButton" onclick="buildMenu()"
-								data-toggle="dropdown" data-offset="0,2" aria-expanded="false" aria-haspopup="true">
+							data-toggle="dropdown" data-offset="0,2" aria-expanded="false" aria-haspopup="true">
 							Load Build
 						</button>
 						<div id="loadMenu" class="dropdown-menu" data-toggle="tooltip" data-placement="right"
-								title="Right click to Delete."></div>
+							title="Right click to Delete."></div>
 					</div>
 
 					<div id="selectJob" onclick="changeJob()"></div>
-					
+
 					<!-- Default dropup button -->
 					<div id="jobDrop" class="btn-group dropup">
-						<button type="button" class="btn dropdown-toggle"
-						data-toggle="dropdown" data-offset="-40,5" aria-haspopup="true" aria-label="dropdown" aria-expanded="false"></button>
+						<button type="button" class="btn dropdown-toggle" data-toggle="dropdown" data-offset="-40,5"
+							aria-haspopup="true" aria-label="dropdown" aria-expanded="false"></button>
 						<div class="dropdown-menu">
 							<a class="dropdown-item" onclick="changeJob(knight_skills, 'Knight')" href="#">Knight</a>
-							<a class="dropdown-item" onclick="changeJob(berserker_skills, 'Berserker')" href="#">Berserker</a>
+							<a class="dropdown-item" onclick="changeJob(berserker_skills, 'Berserker')"
+								href="#">Berserker</a>
 							<a class="dropdown-item" onclick="changeJob(wizard_skills, 'Wizard')" href="#">Wizard</a>
 							<a class="dropdown-item" onclick="changeJob(priest_skills, 'Priest')" href="#">Priest</a>
 							<a class="dropdown-item" onclick="changeJob(archer_skills, 'Archer')" href="#">Archer</a>
-							<a class="dropdown-item" onclick="changeJob(heavy_gunner_skills, 'Heavy Gunner')" href="#">Heavy Gunner</a>
+							<a class="dropdown-item" onclick="changeJob(heavy_gunner_skills, 'Heavy Gunner')"
+								href="#">Heavy Gunner</a>
 							<a class="dropdown-item" onclick="changeJob(thief_skills, 'Thief')" href="#">Thief</a>
-							<a class="dropdown-item" onclick="changeJob(assassin_skills, 'Assassin')" href="#">Assassin</a>
-							<a class="dropdown-item" onclick="changeJob(runeblade_skills, 'Runeblade')" href="#">Runeblade</a>
-							<a class="dropdown-item" onclick="changeJob(soul_binder_skills, 'Soul Binder')" href="#">Soul Binder</a>
+							<a class="dropdown-item" onclick="changeJob(assassin_skills, 'Assassin')"
+								href="#">Assassin</a>
+							<a class="dropdown-item" onclick="changeJob(runeblade_skills, 'Runeblade')"
+								href="#">Runeblade</a>
+							<a class="dropdown-item" onclick="changeJob(soul_binder_skills, 'Soul Binder')"
+								href="#">Soul Binder</a>
 							<a class="dropdown-item" onclick="changeJob(striker_skills, 'Striker')" href="#">Striker</a>
 						</div>
 					</div>
-					
+
 				</div>
-			
+
 			</div>
-			
+
 			<div id="info_box">
-				
-				<div id="info_name"><p></p></div>
-				
-				<div id="info_element"><p></p></div>
-				
+
+				<div id="info_name">
+					<p></p>
+				</div>
+
+				<div id="info_element">
+					<p></p>
+				</div>
+
 				<div id="info_content">
-				
+
 					<div id="info_image_box">
 						<div id="info_image"></div>
 					</div>
-					
+
 					<div id="info_top_description">
-					
+
 						<div class="info_resource"></div>
 						<div class="info_level"></div>
-					
+
 					</div>
-					
+
 					<div id="info_description"></div>
-					
+
 					<div class="info_linebreak"></div>
-					
+
 					<div id="info_description_2"></div>
-					
+
 					<div class="info_linebreak"></div>
-				
+
 					<div id="info_description_3"></div>
-				
+
 				</div>
-				
+
 			</div>
-			
+
 		</div>
-		
+
 		<div id="lapenshard_box">
-		
-			<div id="drop_zone_1" data-color="red" data-used="false" data-id="1" data-dropzone="true" class="drop_zone" ondrop="lapenDrop(event)" ondragover="lapenAllowDrop(event)"></div>
-			<div id="drop_zone_2" data-color="blue" data-used="false" data-id="2" data-dropzone="true" class="drop_zone" ondrop="lapenDrop(event)" ondragover="lapenAllowDrop(event)"></div>
-			<div id="drop_zone_3" data-color="green" data-used="false" data-id="3" data-dropzone="true" class="drop_zone" ondrop="lapenDrop(event)" ondragover="lapenAllowDrop(event)"></div>
-			<div id="drop_zone_4" data-color="red" data-used="false" data-id="4" data-dropzone="true" class="drop_zone" ondrop="lapenDrop(event)" ondragover="lapenAllowDrop(event)"></div>
-			<div id="drop_zone_5" data-color="blue" data-used="false" data-id="5" data-dropzone="true" class="drop_zone" ondrop="lapenDrop(event)" ondragover="lapenAllowDrop(event)"></div>
-			<div id="drop_zone_6" data-color="green" data-used="false" data-id="6" data-dropzone="true" class="drop_zone" ondrop="lapenDrop(event)" ondragover="lapenAllowDrop(event)"></div>
-		
+
+			<div id="drop_zone_1" data-color="red" data-used="false" data-id="1" data-dropzone="true" class="drop_zone"
+				ondrop="lapenDrop(event)" ondragover="lapenAllowDrop(event)"></div>
+			<div id="drop_zone_2" data-color="blue" data-used="false" data-id="2" data-dropzone="true" class="drop_zone"
+				ondrop="lapenDrop(event)" ondragover="lapenAllowDrop(event)"></div>
+			<div id="drop_zone_3" data-color="green" data-used="false" data-id="3" data-dropzone="true"
+				class="drop_zone" ondrop="lapenDrop(event)" ondragover="lapenAllowDrop(event)"></div>
+			<div id="drop_zone_4" data-color="red" data-used="false" data-id="4" data-dropzone="true" class="drop_zone"
+				ondrop="lapenDrop(event)" ondragover="lapenAllowDrop(event)"></div>
+			<div id="drop_zone_5" data-color="blue" data-used="false" data-id="5" data-dropzone="true" class="drop_zone"
+				ondrop="lapenDrop(event)" ondragover="lapenAllowDrop(event)"></div>
+			<div id="drop_zone_6" data-color="green" data-used="false" data-id="6" data-dropzone="true"
+				class="drop_zone" ondrop="lapenDrop(event)" ondragover="lapenAllowDrop(event)"></div>
+
 			<div id="lapenshard_icon"></div>
 			<div id="lapenshard_title">Lapenshard</div>
-		
+
 			<div id="close_btn" onclick="closeLapenshardMenu()"></div>
-		
-			<div data-dropzone="true" data-color="base" ondrop="lapenDrop(event)" ondragover="lapenAllowDrop(event)" id="lapen_list"></div>
-		
+
+			<div data-dropzone="true" data-color="base" ondrop="lapenDrop(event)" ondragover="lapenAllowDrop(event)"
+				id="lapen_list"></div>
+
 		</div>
-		
+
 		<!-- CALCULATOR END -->
-		
+
 	</div>
 
 	<footer>
 		<p id="footer_text">© 2018-2019 Maplestory 2 Fansite</p>
 	</footer>
-	
+
 	<!-- Info JavaScript -->
 	<script defer type="text/javascript" src="scripts/skills.js"></script>
-	
+
 	<!-- jQuery, Popper, Bootstrap -->
 	<script src="scripts/jquery.slim.min.js"></script>
 	<script defer src="scripts/popper.min.js"></script>
@@ -1388,112 +1652,112 @@
 	<script type="text/javascript" src="scripts/explore.js"></script>
 	<script type="text/javascript" src="scripts/map.min.js"></script>
 	<script defer type="text/javascript" src="scripts/save_load.js"></script>
-	
+
 	<script>
-	
+
 		let pages = 0;
 		let updateAgain = false;
-		
+
 		let params = location.href.split('#')[1];
-		if( params != undefined && params.length > 1 ){
-			if( params.includes("-") ){
+		if (params != undefined && params.length > 1) {
+			if (params.includes("-")) {
 				pages = 2;
-			}else{
+			} else {
 				pages = 1;
 			}
 		}
-		
-		function updatePages(){
-		
+
+		function updatePages() {
+
 			$("#home_container").css("opacity", "0");
 			$("#explore_container").css("opacity", "0");
 			$("#skills_container").css("opacity", "0");
-			
-			if( pages == 0 ){
+
+			if (pages == 0) {
 				$("#arrow_left_text").text("Skills");
 				$("#arrow_right_text").text("Explore");
 				$("#home_container").show();
 				document.title = "MS2 Fansite | Home";
-				
-				setTimeout(function(){
+
+				setTimeout(function () {
 					$("#home_container").css("opacity", "1");
 				}, 250);
-				
-				setTimeout(function(){
+
+				setTimeout(function () {
 					$("#explore_container").hide();
 					$("#skills_container").hide();
 				}, 500);
-				
+
 			}
-			
-			if( pages == 1 ){
+
+			if (pages == 1) {
 				$("#arrow_left_text").text("Home");
 				$("#arrow_right_text").text("Skills");
 				$("#explore_container").show();
 				document.title = "MS2 Fansite | Explore";
-				
-				setTimeout(function(){
+
+				setTimeout(function () {
 					$("#explore_container").css("opacity", "1");
 				}, 250);
-				
-				setTimeout(function(){
+
+				setTimeout(function () {
 					$("#home_container").hide();
 					$("#skills_container").hide();
 				}, 500);
 			}
-			
-			if(pages == 2 ){
+
+			if (pages == 2) {
 				$("#arrow_left_text").text("Explore");
 				$("#arrow_right_text").text("Home");
 				$("#skills_container").show();
 				document.title = "MS2 Fansite | Skills";
-				
-				setTimeout(function(){
+
+				setTimeout(function () {
 					$("#skills_container").css("opacity", "1");
 				}, 250);
-				
-				setTimeout(function(){
+
+				setTimeout(function () {
 					$("#home_container").hide();
 					$("#explore_container").hide();
 				}, 500);
-				
+
 			}
-		
+
 		}
-		
-		function changePage(direction){
-		
-			if( !updateAgain ){ return false; }
+
+		function changePage(direction) {
+
+			if (!updateAgain) { return false; }
 			updateAgain = false;
-		
-			if( direction == "forward" ){ pages++; }
-			if( direction == "backward" ){ pages--; }
-			if( pages > 2 ){ pages = 0; }
-			if( pages < 0 ){ pages = 2; }
-			
-			if( pages != 2 ){
+
+			if (direction == "forward") { pages++; }
+			if (direction == "backward") { pages--; }
+			if (pages > 2) { pages = 0; }
+			if (pages < 0) { pages = 2; }
+
+			if (pages != 2) {
 				let jobName = document.getElementById("jobName");
 				changeRank(1, jobName);
 				closeLapenshardMenu();
 			}
-			
+
 			setCurrentPage(pages);
 			updatePages();
-			
-			setTimeout(function(){
+
+			setTimeout(function () {
 				updateAgain = true;
 			}, 500);
-		
+
 		}
-		
-		setTimeout(function(){
+
+		setTimeout(function () {
 			updatePages();
 		}, 250);
-		
-		setTimeout(function(){
+
+		setTimeout(function () {
 			updateAgain = true;
 		}, 750);
-	
+
 	</script>
 
 </body>
